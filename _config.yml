@@ -1,10 +1,10 @@
-# Site settings
+# configurações do site
 title: Gawiga
 description: A personal site
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gawiga.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-# User settings
+# configurações do usuário
 username: Gawiga
 user_description: Gawiga Developer 
 user_title: Gawiga Developer
