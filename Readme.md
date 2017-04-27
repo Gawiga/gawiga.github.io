@@ -1,8 +1,7 @@
-## Will Jekyll Template - [Demo](http://willianjusten.com.br/will-jekyll-template)
+## Blog pessoal do Gawiga
 
-![Screenshot](screenshot.png)
 
-This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
+Baseado nesta [Demo](http://willianjusten.com.br/will-jekyll-template) do Willian Justen.
 
 The Theme features:
 
