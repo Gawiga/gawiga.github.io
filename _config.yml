@@ -1,13 +1,13 @@
 # configurações do site
-title: Gawiga
-description: A personal site
+title: gawiga
+description: a personal site
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gawiga.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # configurações do usuário
 username: Gawiga
-user_description: Gawiga Developer 
-user_title: Gawiga Developer
+user_description: Developer 
+user_title: developer
 email: gawiga@gmail.com
 twitter_username: gawiga
 github_username:  gawiga
