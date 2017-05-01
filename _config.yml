@@ -11,7 +11,7 @@ user_title: developer
 email: gawiga@gmail.com
 twitter_username: gawiga
 github_username:  gawiga
-gplus_username:  gawiga
+facebook_username:  gawiga
 disqus_username: gawiga
 
 # Build settings
@@ -27,7 +27,7 @@ compress_html:
   endings: []
   profile: false
 
-# Links to include in menu navigation
+# Links to include in menu navig ation
 # For external links add external: true
 links:
   - title: Início
