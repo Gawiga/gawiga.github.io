@@ -1,9 +1,60 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
 <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
+    <section class="post-content" itemscope itemtype="http://schema.org/BlogPosting">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="Gabriel Galdino">
+        
+
+
+        <h2>Sobre mim</h2>
+
+        <p>Olá mundo, meu nome é <strong>Gabriel</strong>, tenho 23 anos, sou Bacharel em Sistemas de Informação e amo programar.
+            Para mim, criar algo do zero e até mesmo dar a manutenção em um sistema é algo muito prazeroso. Pode parecer
+            estranho, mas quem não é? Desenvolvi essa página em Jekyll, fazendo um fork de um projeto do github, utilizando
+            HTML, CSS e JS. Só! Sem banco de dados, sem pagar por hospedagem, uma vez que esta página é hospedada no GitHub
+            Pages. Estou sempre disposto a aprender novas tecnologias, apanhar com elas e crescer profissionalmente e pessoalmente.
+            Segue uma lista de algumas tecnologias com qual já tive algumas/muitas aventuras</p>
+
+        <h2>Habilidades</h2>
+
+        <ul class="skill-list">
+            <li>C# (LINQ)</li>
+            <li>ASP.NET (AJAX, Web Forms)</li>
+            <li>SQL Server</li>
+            <li>Windows Forms</li>
+            <li>Bootstrap</li>
+            <li>Javascript</li>
+            <li>JQuery</li>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>Git</li>
+            <li>Jekyll (Liquid, Front Matter)</li>
+            <li>CMS (Wordpress, Wix)</li>
+        </ul>
+
+        <h2>Projetos</h2>
+
+        <ul>
+            <li><a href="https://github.com/">DuPont (2017)</a></li>
+
+            <li><a href="https://github.com/">Carsys (2016)</a></li>
+
+            <li><a href="http://www.autopecasgaldino.com/">Auto Peças Galdino (2010)</a>
+                <br />Utilizando apenas o Blogger e alguns macetes de HTML e Javascript para criar o meu primeiro site.</li>
+        </ul>
+
+        <h2>Veja mais</h2>
+        <p><a href="https://www.linkedin.com/in/gawiga/">Currículo no Linkedin</a></p>
+
+            <a role="button" class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
+    </section>
+
+
+</main>
+    
+    <!--{% for post in site.posts %}
         <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                 <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
                     <meta itemprop="datePublished" content="{{post.date}}">
@@ -30,5 +81,4 @@ layout: default
                     </div>
                 </div>
         </article>
-    {% endfor %}
-</main>
+    {% endfor %}-->
