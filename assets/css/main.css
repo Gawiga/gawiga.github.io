@@ -317,7 +317,7 @@ h4 {
 }
 
 .icons-home a:hover .icon {
-    fill: #0562dc
+    fill: #004E37
 }
 
 .down {
@@ -687,9 +687,9 @@ body.search-overlay:after {
 
 .tags a {
     font-size: .875rem;
-    color: #0562dc;
+    color: #004E37;
     display: inline-block;
-    border: 1px solid #0562dc;
+    border: 1px solid #004E37;
     border-radius: .313rem;
     padding: .25rem .625rem;
     margin-right: .125rem;
@@ -713,7 +713,7 @@ body {
 
 .header-site,
 .header-post {
-    background: #0562dc;
+    background: #004E37;
     height: 100%;
 }
 
@@ -922,7 +922,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #0562dc;
+    color: #004E37;
     font-size: 5rem;
     line-height: 1.6;
 }
@@ -995,7 +995,7 @@ body {
 }
 
 .post-item .content .date {
-    color: #0562dc
+    color: #004E37
 }
 
 .post-item .content .post-title {
@@ -1018,7 +1018,7 @@ body {
 }
 
 .post-item .content .description a {
-    color: #0562dc;
+    color: #004E37;
     text-decoration: underline
 }
 
@@ -1204,7 +1204,7 @@ body {
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    border-left: .313rem solid #0562dc;
+    border-left: .313rem solid #004E37;
     padding: 0 1.875rem;
     margin: 3.125rem auto;
 }
@@ -1298,7 +1298,7 @@ body {
 }
 
 .share a:hover svg {
-    fill: #0562dc
+    fill: #004E37
 }
 
 table {
@@ -1612,7 +1612,7 @@ pre span {
 }
 
 .author .name a:hover {
-    color: #0562dc
+    color: #004E37
 }
 
 @media only screen and (min-width:37.5rem) {
@@ -1637,7 +1637,7 @@ pre span {
 
 .author .email {
     text-decoration: none;
-    color: #0562dc
+    color: #004E37
 }
 
 .comments {
@@ -1669,7 +1669,7 @@ pre span {
 }
 
 footer {
-    background: #0562dc;
+    background: #004E37;
     padding: 1.563rem 0;
     margin-top: 100px;
 }
