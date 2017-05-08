@@ -8,71 +8,88 @@ layout: default
 
         <h2>Sobre mim</h2>
 
-        <p>Olá mundo, meu nome é <strong>Gabriel</strong>, tenho 23 anos, sou Bacharel em Sistemas de Informação e amo programar.
-            Para mim, criar algo do zero e até mesmo dar a manutenção em um sistema é algo muito prazeroso. Pode parecer
-            estranho, mas quem não é? Desenvolvi essa página em Jekyll, fazendo um fork de um projeto do github, utilizando
+        <p class="justify">Olá mundo, meu nome é <strong>Gabriel Galdino</strong>, tenho 23 anos, sou Bacharel em Sistemas de Informação e amo programar.
+            Desenvolvi esta página em <strong>Jekyll</strong>, fazendo um fork de um projeto do GitHub, utilizando apenas
             HTML, CSS e JS. Só! Sem banco de dados, sem pagar por hospedagem, uma vez que esta página é hospedada no GitHub
-            Pages. Estou sempre disposto a aprender novas tecnologias, apanhar com elas e crescer profissionalmente e pessoalmente.
+            Pages. Como você pode ver, sempre estou disposto a aprender novas tecnologias, apanhar com elas e crescer profissionalmente e pessoalmente.
             Segue uma lista de algumas tecnologias com qual já tive algumas/muitas aventuras</p>
 
         <h2>Habilidades</h2>
 
-        <ul class="skill-list">
-            <li>C# (LINQ)</li>
-            <li>ASP.NET (AJAX, Web Forms)</li>
-            <li>SQL Server</li>
-            <li>Windows Forms</li>
-            <li>Bootstrap</li>
-            <li>Javascript</li>
-            <li>JQuery</li>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>Git</li>
-            <li>Jekyll (Liquid, Front Matter)</li>
-            <li>CMS (Wordpress, Wix)</li>
+        <ul class="doublecolumn">
+            C# (LINQ) <br>
+            ASP.NET (AJAX, Web Forms) <br>
+            SQL Server <br>
+            Windows Forms <br>
+            Bootstrap <br>
+            Javascript <br>
+            JQuery <br>
+            CSS <br>
+            HTML <br>
+            Git <br>
+            Jekyll (Liquid, Front Matter) <br>
+            CMS (Wordpress, Wix) <br>
         </ul>
 
         <h2>Projetos</h2>
 
-        <ul>
-            <li><a href="https://github.com/">DuPont (2017)</a></li>
+        <p class="justify">
+            <a href="https://github.com/Gawiga/DuPont">DuPont (2017)</a> - 
+            Trabalho de conclusão de curso, aonde o sistema faz o calculo da Analise DuPont de qualquer empresa. 
+            Muito utilizado por investidores para o levantamento de risco da empresa. 
+            O código fonte está hospedado no GitHub e está livre para ser utilizado por todo mundo. :)
+            <br><br>
+            <a href="http://www.carsys.com.br/extranet/">Carsys (2016)</a> -
+            Participei do desenvolvimento do sistema em todos seus módulo. Atualmente o sistema é utilizado por diversas prestadoras de seguros em todo Brasil.
+            <br><br>
+            <a href="gawiga.wixsite.com/gawiga">Wix Developer (2017)</a> - Como desenvolvedor Wix certificado, fiz diversos sites com hospedagem gratuita para diversas empresas. Segue um lista deles:             
+            <ul class="doublecolumn">
+                <a href="gawiga.wixsite.com/funilariapitstop">Funilaria PitStop</a><br>
+                <a href="gawiga.wixsite.com/sorvetejardimdolago">Sorveteria Natuice</a><br>
+                <a href="gawiga.wixsite.com/casaderacaopavao">Casa de Ração Pavão</a><br>
+                <a href="gawiga.wixsite.com/barbeariastyllus">Barbearia Styllus</a><br>
+                <a href="gawiga.wixsite.com/padariasaojorge">Padaria São Jorge</a><br>
+                <a href="gawiga.wixsite.com/amoab-jundiai">AMOAB Jundiaí</a><br>
+                <a href="gawiga.wixsite.com/galdinodejundiai">Galdino de Jundiaí</a><br>
+                <a href="gawiga.wixsite.com/dongaldino">Don Galdino</a><br>
+            </ul>
+        </p>
 
-            <li><a href="https://github.com/">Carsys (2016)</a></li>
+        <h2>Contato</h2>
 
-            <li><a href="http://www.autopecasgaldino.com/">Auto Peças Galdino (2010)</a>
-                <br />Utilizando apenas o Blogger e alguns macetes de HTML e Javascript para criar o meu primeiro site.</li>
-        </ul>
-
-        <h2>Veja mais</h2>
-        <p><a href="https://www.linkedin.com/in/gawiga/">Currículo no Linkedin</a></p>
+        <p class="justify">
+            Gostou do meu site e da minha apresentação? 
+            Bem para entrar em contato comigo é bem simples, basta clicar nos <strong>ícones de redes sociais</strong> no cabeçalho acima. 
+            Pode ser pelo twitter, facebook, github, linkedin e até por email. 
+        </p>
     </section>
 </main>
     
-    <!--{% for post in site.posts %}
-        <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
-                    <meta itemprop="datePublished" content="{{post.date}}">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        <span class="day">
-                            {{ post.date | date: "%d" }}
-                        </span>
-                        <span class="month-year">
-                            {{ post.date | date: "%B %Y" }}
-                        </span>
-                    </time>
-                </a>
-                <div class="content">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
-                    <p class="description">
-                        {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Leia mais sobre {{post.title}}</a>
-                    </p>
+<!--{% for post in site.posts %}
+    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+            <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
+                <meta itemprop="datePublished" content="{{post.date}}">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    <span class="day">
+                        {{ post.date | date: "%d" }}
+                    </span>
+                    <span class="month-year">
+                        {{ post.date | date: "%B %Y" }}
+                    </span>
+                </time>
+            </a>
+            <div class="content">
+                <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
+                <p class="description">
+                    {{ post.content | strip_html | truncatewords:40 }}
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="link">Leia mais sobre {{post.title}}</a>
+                </p>
 
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
+                <div class="tags">
+                    {% for tag in post.tags %}
+                        <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
+                    {% endfor %}
                 </div>
-        </article>
-    {% endfor %}-->
+            </div>
+    </article>
+{% endfor %}-->
