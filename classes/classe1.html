@@ -1,0 +1,65 @@
+--- 
+layout: default 
+---
+
+<h2>Classes livres</h2>
+
+<p class="justify">
+`   public class Conexao
+{
+    private static OracleConnection sqlConn;
+
+    public void DBConnection(string DBschema)
+    {
+        string schema = "'" + DBschema + "'";
+
+        sqlConn = new OracleConnection();
+
+        sqlConn.ConnectionString = ConfigurationManager.ConnectionStrings[schema].ConnectionString;
+    }
+
+    public void openConnection()
+    {
+        sqlConn.Open();
+    }
+
+    public void closeConnection()
+    {
+        sqlConn.Close();
+    }
+
+    public static OracleConnection Connection
+    {
+        get { return sqlConn; }
+    }
+
+    private static OracleTransaction transaction;
+    public static OracleTransaction Transaction
+    {
+        get { return transaction; }
+    }
+
+    public OracleTransaction BeginTransaction()
+    {
+        transaction = sqlConn.BeginTransaction();
+        return transaction;
+    }
+
+    public void Commit()
+    {
+        transaction.Commit();
+        transaction.Dispose();
+        transaction = null;
+    }
+
+    public void RollBack()
+    {
+        transaction.Rollback();
+        transaction.Dispose();
+        transaction = null;
+    }
+}`
+
+
+
+</p>
