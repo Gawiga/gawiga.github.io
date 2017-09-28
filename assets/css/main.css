@@ -10,6 +10,23 @@
     text-align: justify;
 }
 
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Open Sans';
+    background: white;
+    font-size: 24px;
+    font-size-adjust: 14px;
+}
+
+.centralizado {
+    text-align: center;
+}
 /* css original */
 
 html {
@@ -61,7 +78,8 @@ a {
 
 a:active,
 a:hover {
-    outline: 0
+    outline: 0;
+    color: #ff0000 !important;
 }
 
 abbr[title] {
@@ -642,14 +660,14 @@ body.search-overlay:after {
     padding-left: 10%;
 }
 
-.search-wrapper *zoom 1:after,
-.search-wrapper *zoom 1:before {
+.search-wrapper *zoom :after,
+.search-wrapper *zoom :before {
     display: table;
     line-height: 0;
     content: ""
 }
 
-.search-wrapper *zoom 1:after {
+.search-wrapper *zoom :after {
     clear: both
 }
 
