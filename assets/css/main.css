@@ -11,17 +11,14 @@
 }
 
 .nav {
-    padding-left: 0;
-    margin-bottom: 0;
     text-align: center;
     display: block;
-    position: relative;
-    width: 100%;
     padding: 10px;
     font-family: 'Open Sans';
-    background: white;
+    background: #ffffff;
     font-size: 24px;
-    font-size-adjust: 14px;
+    text-decoration: none !important;
+    height: auto;
 }
 
 .centralizado {
@@ -1051,7 +1048,7 @@ body {
 
 .post-item .content .description a {
     color: #004E37;
-    text-decoration: underline
+    text-decoration: none;
 }
 
 .post-content {
