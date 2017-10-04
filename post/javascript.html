@@ -1,0 +1,112 @@
+--- 
+layout: post 
+title: Javascript 
+description: uma aula de javascript 
+permalink: /javascript/ 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link src="../assets/js/aula.js" type=""> -->
+    <script src="../assets/js/aula.js"></script>
+    <script src="../assets/js/jquery-3.2.1.js"></script>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h1>Uma experiência com JS</h1>
+        <p>
+            <input type="color"></input>
+            <input type="email"></input>
+        </p>
+        <p>
+            <label for="" class="label">CEP</label>
+            <input type="text" name="cep" id="cep" class="text" onblur="buscaCEP(this)" onkeyup="validaCEP(this)" maxlength="10">
+        </p>
+        <p>
+            <label for="">UF</label>                 
+            <input type="text" name="uf" id="uf" disabled>       
+
+            <label for="">Cidade</label>
+            <input type="text" name="cidade" id="cidade" disabled>
+        </p>
+        <p>
+            <label for="">Bairro</label>
+            <input type="text" name="bairro" id="bairro" disabled>
+
+            <label for="">Endereço</label>
+            <input type="text" name="endereco" id="endereco" disabled>
+        </p>
+        <h1>JS vs jQuery</h1>
+        <p>            
+            {% highlight javascript %}
+
+            //exemplo JS
+            //exemplo jQuery
+            document.querySelector("#idElement") 
+            $("#idElement") 
+
+            document.querySelector("#idElement").style.display => 
+            $("#idElement").css("display");
+
+            document.querySelector("#idElement").style.disabled 
+            $("#idElement").prop("disabled");
+
+            document.querySelector("#idElement").style.innerHTML
+            $("#idElement").html();
+
+            document.querySelector("#idElement").style.innerHTML += "Valor" 
+            $("#idElement").append();
+
+            document.querySelector("#idElement").style.display
+            $("#idElement").css("display", "none");
+
+            {% endhighlight %}
+        </p>
+        <h1>Expressões Regulares (RegEx)</h1>
+        <p>
+            {% highlight csharp %} 
+            //explicações de regex:
+
+            \w = [A-Za-z0-9] = word char
+            \d = [0-9] = digitos
+            {} = quantidade de caracteres
+            () = grupos
+            ? = opcional
+            ^ = validador inicial
+            $ = validador final
+            
+            //validador de placa
+            /^([A-Z]{3})\-?(\d{4})$/
+
+            {% endhighlight %}
+            
+        </p>
+        <p>
+            <label for="">Placa</label>
+            <input type="text" name="placa" id="placa" onkeyup="validaPlaca(this)" maxlength="8" placeholder="DDD-8888">
+            <button type="button" onclick="enviarPlaca();" id="enviar" disabled>Enviar</button>
+            <select name="listaplacas" id="listaplacas">
+                <option value="0">Selecione...</option>
+            </select>
+        </p>
+        <p>
+            <input id="helloWorld" type="text" onblur="OlaMundo();">
+        </p>
+    </section>
+    <table class="table">
+            <tr>
+                <td>
+                    table
+                </td>
+            </tr>
+        </table>
+</body>
+
+</html>
