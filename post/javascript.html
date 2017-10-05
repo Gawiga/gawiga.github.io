@@ -86,7 +86,6 @@ permalink: /javascript/
             /^([A-Z]{3})\-?(\d{4})$/
 
             {% endhighlight %}
-            
         </p>
         <p>
             <label for="">Placa</label>
@@ -100,13 +99,54 @@ permalink: /javascript/
             <input id="helloWorld" type="text" onblur="OlaMundo();">
         </p>
     </section>
-    <table class="table">
+    <section>
+    <table class="" id=tabela>
+        <thead>
+            <tr>
+                <th colspan="6">RICK AND MORTY</th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>DATA DE LANÇAMENTO</th>
+                <th>DESCRICAO</th>
+                <th>NOME EP</th>
+                <th>Nº DO EP</th>
+                <th>TEMPORADA</th>
+            </tr>
             <tr>
                 <td>
-                    table
+                    <input type="text" id="id" placeholder="id">
+                </td>
+                <td>
+                    <input type="date" id="dataLancamento" placeholder="data do lançamento">
+                </td>
+                <td>
+                    <input type="text" id="descricao" placeholder="descricao">
+                </td>
+                <td>
+                    <input type="text" id="nomeEpisodio" placeholder="nome do episódio">
+                </td>
+                <td>
+                    <input type="text" id="numeroDoEp" placeholder="numero do episódio">
+                </td>
+                <td>
+                    <input type="text" id="temporada" placeholder="temporada">
                 </td>
             </tr>
-        </table>
+        </thead>
+        <!-- DADOS INSERIDOS ATRAVES DE JQUERY -->
+        <tbody>
+        </tbody>
+    </table>
+    </section>
+    <section>
+        <p>
+            <button id="consome" class="" onclick="consomeAPI();" >GET</button>
+            <button id="vai" class="" onclick="inserirAPI();" >POST</button>
+            <button id="atualiza" onclick="atualizaAPI();">UPDATE</button>
+            <button id="sai" class="" onclick="deletaAPI();">DELETE</button>
+        </p>
+    </section>
 </body>
-
+<script src="../assets/js/aula2.js"></script>
 </html>
