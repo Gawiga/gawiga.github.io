@@ -111,5 +111,5 @@ function retSucesso(data){
 }
 
 function retErro(){
-    alert('DEU ERRO CARALHO');
+    alert('alguma coisa deu errado');
 }
