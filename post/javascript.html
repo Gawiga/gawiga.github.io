@@ -12,7 +12,9 @@ permalink: /javascript/
     <!-- <link src="../assets/js/aula.js" type=""> -->
     <script src="../assets/js/aula.js"></script>
     <script src="../assets/js/jquery-3.2.1.js"></script>
-    <!-- <meta charset="UTF-8">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Document</title>
@@ -94,57 +96,67 @@ permalink: /javascript/
             <select name="listaplacas" id="listaplacas">
                 <option value="0">Selecione...</option>
             </select>
+            <button id="botao">teste</button>
         </p>
         <p>
-            <input id="helloWorld" type="text" onblur="OlaMundo();">
+            <input id="helloWorld" type="text" onblur="OlaMundo();" placeholder="evento onblur">
         </p>
     </section>
     <section>
-    <table class="" id=tabela>
-        <thead>
-            <tr>
-                <th colspan="6">RICK AND MORTY</th>
-            </tr>
-            <tr>
-                <th>ID</th>
-                <th>DATA DE LANÇAMENTO</th>
-                <th>DESCRICAO</th>
-                <th>NOME EP</th>
-                <th>Nº DO EP</th>
-                <th>TEMPORADA</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" id="id" placeholder="id">
-                </td>
-                <td>
-                    <input type="date" id="dataLancamento" placeholder="data do lançamento">
-                </td>
-                <td>
-                    <input type="text" id="descricao" placeholder="descricao">
-                </td>
-                <td>
-                    <input type="text" id="nomeEpisodio" placeholder="nome do episódio">
-                </td>
-                <td>
-                    <input type="text" id="numeroDoEp" placeholder="numero do episódio">
-                </td>
-                <td>
-                    <input type="text" id="temporada" placeholder="temporada">
-                </td>
-            </tr>
-        </thead>
-        <!-- DADOS INSERIDOS ATRAVES DE JQUERY -->
-        <tbody>
-        </tbody>
-    </table>
+        <table class="class" id="tabela">
+            <thead>
+                <tr>
+                    <th colspan="7">RICK AND MORTY</th>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>DATA DE LANÇAMENTO</th>
+                    <th>DESCRICAO</th>
+                    <th>NOME EP</th>
+                    <th>Nº DO EP</th>
+                    <th>TEMPORADA</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <!-- DADOS INSERIDOS ATRAVES DE JQUERY -->
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <input type="hidden" id="id" placeholder="id" style="width: 50px" />
+                    </td>
+                    <td>
+                        <input type="date" id="dataLancamento" placeholder="data do lançamento" />
+                    </td>
+                    <td>
+                        <input type="text" id="descricao" placeholder="descricao" />
+                    </td>
+                    <td>
+                        <input type="text" id="nomeEpisodio" placeholder="nome do episódio" />
+                    </td>
+                    <td>
+                        <input type="text" id="numeroDoEp" placeholder="nº do ep" style="width: 80px" />
+                    </td>
+                    <td>
+                        <input type="text" id="temporada" placeholder="nº temp" style="width: 100px" />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </section>
     <section>
         <p>
             <button id="consome" class="" onclick="consomeAPI();" >GET</button>
             <button id="vai" class="" onclick="inserirAPI();" >POST</button>
             <button id="atualiza" onclick="atualizaAPI();">UPDATE</button>
-            <button id="sai" class="" onclick="deletaAPI();">DELETE</button>
+        </p>
+        <p>
+            <label>Links para acesso do código utilizado</label>
+            <a href="../assets/js/aula2.js">aula1.js</a>, 
+            <a href="../assets/js/aula2.js">aula2.js</a>
         </p>
     </section>
 </body>
