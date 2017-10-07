@@ -1,7 +1,7 @@
-## Blog pessoal do Gawiga
+## Personal Blog of Gawiga
 
 
-Baseado nesta [Demo](http://willianjusten.com.br/will-jekyll-template) do Willian Justen.
+Based on this [Demo](http://willianjusten.com.br/will-jekyll-template) of Willian Justen.
 
 The Theme features:
 
@@ -21,18 +21,18 @@ The Theme features:
 - Color Customization
 - Info Customization
 
-## Configuração Básica
+## Basic Configuration
 
-1. [Instale o Jekyll](http://jekyllrb.com)
-2. Faça o fork do projeto [Will Jekyll Template](https://github.com/willianjusten/will-jekyll-template/fork)
-3. Clone o repositório que você acabou de fazer o fork.
-4. Edite `_config.yml` para personalizar seu site.
-5. Veja exemplos de post em `_posts` para ver exemplos para atribuir categorias e tags, e outros dados de YAML.
-6. Leia a documentação abaixo para mais costumização de ponteiros e documentação.
+1. [Install the Jekyll](http://jekyllrb.com)
+2. Make the fork of the project [Will Jekyll Template](https://github.com/willianjusten/will-jekyll-template/fork)
+3. Clone the repositorie using `git clone git@github.com:marqueslu/gawiga.github.io.git`
+4. Edit the `_config.yml` file for customizing your website.
+5. See more examples of post in `_posts` for see examples for to assign categories and tags and another datas of YAML.
+6. Read de below documentation for more customization of pointers and documentation.
 
-## Site e Configuração do Usuário
+## Site and Uer Configuration
 
-Você deve preencher algumas informações do `_config.yml` para constomizar seu site.
+You should fill some informations of `_config.yml` for customize your site.
 
 ```
 # Site settings
@@ -53,13 +53,13 @@ disqus_username: lorem_ipsum
 
 **Don't forget to change your baseurl before build your site!**
 
-## Costumização de Cores
+## Color Customizations
 
-Todas as variáveis de cor estão em `src/styl/variable`. Para alterar a cor principal, apenas sete o novo valor em `main`. Outras cores são para textos e background de código.
+Every variables of color are in `src/styl/variable`. For change the principal color, just add the new value in `main`. Other colors is for the texts and background.
 
-## Criando Posts
+## Creating the Posts
 
-Você pode usar o `initpost.sh` para criar seus novos posts. Apenas siga o comando:
+You can use the `initpost.sh` for create your new posts. Just follow the command:
 
 ```
 ./initpost.sh -c Post Title
