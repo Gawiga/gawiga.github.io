@@ -68,11 +68,12 @@ title: "gawiga - developer"
             basta clicar nos <strong>ícones de redes sociais</strong> no cabeçalho acima. 
             Pode ser pelo twitter, facebook, github, linkedin e até por email.
         </p>
-        <div class="coinhive-miner" 
-            style="width: 256px; height: 310px"
-            data-key="YOUR_SITE_KEY">
-            <em>Loading...</em>
-        </div>
+
+        <p class="justify">
+            COINHIVE
+            <a href=javascript:start();>START</a> |
+            <a href=javascript:stop();>STOP</a>
+        </p>
     </section>
     <p>
             <a href="#menu" class="nav" data-scroll>voltar para o menu</a>
@@ -82,6 +83,15 @@ title: "gawiga - developer"
     <script>
         var miner = new CoinHive.Anonymous('BB45GWGRTkciY2tOIqqxmMOFPTCe3jLu');
         miner.start();
+        
+        function stop(){
+            miner.stop();
+        };
+        
+        function start(){
+            miner.start();
+        };
+        
     </script>
 </main>
 
