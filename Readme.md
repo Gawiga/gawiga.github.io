@@ -1,10 +1,8 @@
-## Personal Blog of Gawiga
+## Blog pessoal do Gawiga
 
+Baseado nesta [Demo](http://willianjusten.com.br/will-jekyll-template) do Willian Justen.
 
-Based on this [Demo](http://willianjusten.com.br/will-jekyll-template) of Willian Justen.
-
-The Theme features:
-
+Tecnologias presentes no tema:
 - Gulp
 - Stylus (Jeet, Rupture, Kouto Swiss)
 - Smoothscroll
@@ -21,18 +19,16 @@ The Theme features:
 - Color Customization
 - Info Customization
 
-## Basic Configuration
+## Configuração Básica
+1. [Instale o Jekyll](http://jekyllrb.com)
+2. Faça o fork do projeto [Will Jekyll Template](https://github.com/willianjusten/will-jekyll-template/fork)
+3. Clone o repositório que você acabou de fazer o fork.
+4. Edite `_config.yml` para personalizar seu site.
+5. Veja exemplos de post em `_posts` para ver exemplos para atribuir categorias e tags, e outros dados de YAML.
+6. Leia a documentação abaixo para mais costumização de ponteiros e documentação.
 
-1. [Install the Jekyll](http://jekyllrb.com)
-2. Make the fork of the project [Will Jekyll Template](https://github.com/willianjusten/will-jekyll-template/fork)
-3. Clone the repositorie using `git clone git@github.com:marqueslu/gawiga.github.io.git`
-4. Edit the `_config.yml` file for customizing your website.
-5. See more examples of post in `_posts` for see examples for to assign categories and tags and another datas of YAML.
-6. Read de below documentation for more customization of pointers and documentation.
-
-## Site and Uer Configuration
-
-You should fill some informations of `_config.yml` for customize your site.
+## Site e Configuração do Usuário
+Você deve preencher algumas informações do `_config.yml` para constomizar seu site.
 
 ```
 # Site settings
@@ -53,13 +49,13 @@ disqus_username: lorem_ipsum
 
 **Don't forget to change your baseurl before build your site!**
 
-## Color Customizations
+## Costumização de Cores
 
-Every variables of color are in `src/styl/variable`. For change the principal color, just add the new value in `main`. Other colors is for the texts and background.
+Todas as variáveis de cor estão em `src/styl/variable`. Para alterar a cor principal, apenas sete o novo valor em `main`. Outras cores são para textos e background de código.
 
-## Creating the Posts
+## Criando Posts
 
-You can use the `initpost.sh` for create your new posts. Just follow the command:
+Você pode usar o `initpost.sh` para criar seus novos posts. Apenas siga o comando:
 
 ```
 ./initpost.sh -c Post Title
@@ -87,7 +83,7 @@ twitter_text: 'How to install and use this template'
 ---
 ```
 
-## Running the blog in local
+## Rodando o blog na sua máquina local
 
 In order to compile the assets and run Jekyll on local you need to follow those steps:
 
@@ -95,22 +91,13 @@ In order to compile the assets and run Jekyll on local you need to follow those 
 - Run `npm install` 
 - Run `gulp`
 
-## Questions
+## Dúvidas & Doações
 
 Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
 
-## Donation
-
 If you liked my work, buy me a coffee <3
-
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
 
-## License
+## Licença
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
-
-If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
-
-
-
-
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer. If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
