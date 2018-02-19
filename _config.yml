@@ -2,7 +2,8 @@
 title: gawiga
 description: a personal site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gawiga.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: https://gawiga.com/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+enforce_ssl: gawiga.com
 
 # configurações do usuário
 username: Gawiga
