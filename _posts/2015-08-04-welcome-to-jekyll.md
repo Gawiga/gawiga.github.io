@@ -10,6 +10,7 @@ tags:
 categories:
 - Jekyll is awesome
 twitter_text: 'Put your twitter description here.'
+permalink: 'blog/welcome'
 ---
 
 You'll find thissssss post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

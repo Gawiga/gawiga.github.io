@@ -9,7 +9,7 @@ tags:
 - template 
 categories:
 - I love Jekyll
-permalink: '/criando-uma-conexao-com-oracle-client-usando-csharp/'
+permalink: 'blog/criando-uma-conexao-com-oracle-client-usando-csharp/'
 ---
 ## Mostrando o código
 
