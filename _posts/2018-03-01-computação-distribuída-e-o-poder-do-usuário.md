@@ -15,7 +15,7 @@ Explicar **computação distribuída** é bem simples, imagine várias máquinas
 
 Agora, conseguir realizar isto de maneira eficiente e eficaz, é outra história, pois que há diversos fatores a serem considerados, primeiro, como vamos dividir essas tarefas? E se um computador não estiver disponível para realizar a tarefa? E se ele começou a computar e parou no meio, mandamos para outro computador? E se ele retomar essa tarefa? 
 
-Esse problemas são recorrentes, porém projetos como [BOINC](https://boinc.berkeley.edu/) e o [BITCOIN](https://bitcoin.org/pt_BR/) conseguiram contornar grande parte dessas barreiras.  
+Esse problemas são recorrentes, porém projetos como [Boinc](https://boinc.berkeley.edu/) e o [Bitcoin](https://bitcoin.org/pt_BR/) conseguiram contornar grande parte dessas barreiras.  
 
 ## E porque isso importa?
 Pode parecer claro, as vantagens que isso trás, primeiro, a descentralização do poder computacional, ou seja, diversas pessoas, em diversas localidades, em diversas máquinas, são as que mantem essa rede e esse poder computacional de pé. Dificultanto assim, uma centralização de poder e um ataque direcionado, tornando a rede mais livre e segura.
@@ -29,7 +29,14 @@ Comprar um servidor é caro e mantê-lo ligado 24/7 custa uma grana em energia e
 Porém, nas últimas decádas temos visto cada vez mais, computadores pessoais, celulares e *wearables* nas mãos de meros mortais, como nós. Utilizamos o poder computacional desses *devices* para rodar aplicações que facilitam no dia-a-dia ou que ajudam a nos escapar do tédio, mas esquecemos que este poder computacional é equivalente ao de super computadores na década de 80/90.
 
 ## O que podemos fazer com o poder de processamento ocioso?
+Hoje utilizamos mais a nossa CPU e GPU para fazer mineração, já que é necessário um grande poder computacional para realizar os cálculos, mas também há a opção de alugar aquele espaço disponível no seu Disco Rígido. (ex)
 
+# Conclusão
+
+# Peer-to-Peer (P2P)
+
+Alugar? Claro, porque não?
+A partir do momento que você adquire um novo device ele é seu, porque não aproveitar o momento em que ele está ligado e conectado na internet para emprestar o seu poder computacional?
 
 ### Developers! Developers! Developers!
 
