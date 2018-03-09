@@ -1,6 +1,7 @@
 --- 
 layout: default 
 title: "gawiga - developer"
+my_variable: /index.html
 ---
 
 <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
@@ -23,20 +24,8 @@ title: "gawiga - developer"
         </ul>
 
         <h2 id="postagens">Postagens</h2>
-        <p class="justify">
-            Algumas postagens pessoais que acho interessante compartilhar no mundo
-            <ul>
-                <a href="/blog/sobre-html-e-css"> Sobre HTML e CSS</a> - Uma breve explicação sobre HTML e CSS
-            </ul>
-            <ul>
-                <a href="/blog/criando-uma-conexao-com-oracle-client-usando-csharp">Criando uma conexão com Oracle Client </a> - Uma classe em C# para Oracle Client
-            </ul> 
-            <ul>
-                <a href="/blog/javascript">JavaScript </a> - Aula de JS e jQuery ministrada por Evair P. Sousa e Nícolas Tossati
-            </ul> 
-            <ul>
-                <a href="/blog/coinhive">CoinHive </a> - Implementação de Mineração de Monero na Nuvem
-            </ul> 
+        <p class="justify">Algumas postagens pessoais que acho interessante compartilhar no mundo
+            {% include blog.html %}
         </p>
 
         <h2 id="projetos">Projetos</h2>
@@ -73,7 +62,7 @@ title: "gawiga - developer"
         </p>
     </section>
     <p>
-            <a href="#menu" class="nav" data-scroll>voltar para o menu</a>
+        <a href="#menu" class="nav" data-scroll>voltar para o menu</a>
     </p>
 </main>
 
