@@ -1,8 +1,9 @@
-## Blog pessoal do Gawiga
+# Meu site pessoal :)
 
 Baseado nesta [Demo](http://willianjusten.com.br/will-jekyll-template) do Willian Justen.
 
-Tecnologias presentes no tema:
+## Tecnologias 
+- Jekyll (Liquid Template)
 - Gulp
 - Stylus (Jeet, Rupture, Kouto Swiss)
 - Smoothscroll
