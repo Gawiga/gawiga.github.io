@@ -13,7 +13,7 @@ permalink: /blog/computacao-distribuida-e-o-poder-do-usuario
 # O que é computação distribuída?
 Explicar **computação distribuída** é bem simples, imagine várias máquinas, realizando a computação de algo, em partes. Cada uma utiliza seu poder computacional para fornecer a resolução de parte de um problema maior, e juntas elas conseguem resolver um problema maior e mais complexo. 
 
-Agora, conseguir realizar isto de maneira eficiente e eficaz, é outra história, pois que há diversos fatores a serem considerados, primeiro, como vamos dividir essas tarefas? E se um computador não estiver disponível para realizar a tarefa? E se ele começou a computar e parou no meio, mandamos para outro computador? E se ele retomar essa tarefa? 
+Agora, conseguir realizar isto de maneira eficiente e eficaz, é outra história, pois que há diversos fatores a serem considerados. Primeiro, como vamos dividir essas tarefas? E se um computador não estiver disponível para realizar a tarefa? E se ele começou a computar e parou no meio, mandamos para outro computador? E se ele retomar essa tarefa? 
 
 Esse problemas são recorrentes, porém projetos como [Boinc](https://boinc.berkeley.edu/) e o [Bitcoin](https://bitcoin.org/pt_BR/) conseguiram contornar grande parte dessas barreiras.  
 
