@@ -1,23 +1,35 @@
 <footer>
-    <p>Feito com <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
-        e com muito <span class="love">❤</span> por <a href="https://twitter.com/gawiga">Gawiga</a> 
-        utilizando o layout do <a href="https://github.com/willianjusten/will-jekyll-template">Willian Justen</a> |  
-        <a href=javascript:start();>⛏️</a><a href=javascript:stop();>✋</a>
-    </p> 
+    <p>
+        Feito com
+        <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+        e com muito
+        <span class="love">❤</span> por
+        <a href="https://twitter.com/gawiga">Gawiga</a>
+        utilizando o layout do
+        <a href="https://github.com/willianjusten/will-jekyll-template">Willian Justen</a> |
+        <a href=javascript:start();>⛏️</a>
+        <a href=javascript:stop();>✋</a>
+    </p>
 </footer>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
+<script src="{{ " /assets/js/main.js " | prepend: site.baseurl }}"></script>
 <script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
     var miner = new CoinHive.Anonymous('BB45GWGRTkciY2tOIqqxmMOFPTCe3jLu');
 
-    function stop(){
+    function stop() {
         miner.stop();
-    };
+    }
 
-    function start(){
+    function start() {
         miner.start();
-        // miner.setThrottle(0.8);
-    };
-
+    }
 </script>
