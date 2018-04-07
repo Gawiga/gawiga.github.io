@@ -246,12 +246,21 @@ a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
     src: local('Open Sans Light'), local('OpenSans-Light'), url("https://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2") format('woff2')
+} */
+
+/* mudar font */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Normal'), local('OpenSans-Normal'), url("https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2") format('woff2')
 }
+
 
 @font-face {
     font-family: 'Open Sans';
