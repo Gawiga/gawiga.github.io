@@ -35,6 +35,9 @@
     font-size: 14px;
 }
 
+li {
+    list-style: none;
+}
 /* css + ou - original */
 
 html {
