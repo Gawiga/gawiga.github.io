@@ -110,11 +110,11 @@ audio:not([controls]) {
 
 [hidden],
 template {
-    display: none
+    display: none;
 }
 
 a {
-    background: transparent
+    background: transparent;
 }
 
 a:active,
@@ -124,12 +124,12 @@ a:hover {
 }
 
 abbr[title] {
-    border-bottom: 1px dotted
+    border-bottom: 1px dotted;
 }
 
 b,
 strong {
-    font-weight: bold
+    font-weight: bold;
 }
 
 dfn {
@@ -279,7 +279,7 @@ optgroup {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 td,
@@ -341,7 +341,7 @@ h3,
 h4 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
-    font-style: normal
+    font-style: normal;
 }
 /* 
 @-webkit-keyframes pulse {
@@ -411,7 +411,7 @@ h4 {
 @media only screen and (min-width:37.5rem) {
     .icons-home a .icon {
         width: 30px;
-        height: 30px
+        height: 30px;
     }
 }
 
@@ -420,7 +420,7 @@ h4 {
 }
 
 .icons-home a:hover .icon {
-    fill: #004E37
+    fill: #004E37;
 }
 
 .down {
@@ -567,7 +567,7 @@ aside.slide {
 
 a.slideButton.slide {
     left: 15.625rem;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .overlay {
@@ -1401,7 +1401,7 @@ body {
 }
 
 .share a:hover svg {
-    fill: #004E37
+   fill: #004E37;
 }
 
 table {
