@@ -343,7 +343,7 @@ h4 {
     font-weight: 800;
     font-style: normal;
 }
-/* 
+
 @-webkit-keyframes pulse {
     from {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
@@ -386,7 +386,7 @@ h4 {
         opacity: .4;
         top: 0
     }
-} */
+} 
 
 .icons-home {
     text-align: center;
@@ -443,7 +443,7 @@ h4 {
     height: 100px;
     fill: #fff;
     -webkit-animation: pulse 1.3s infinite;
-    animation: pulse 1.3s infinite
+    animation: pulse 1.3s infinite;
 }
 
 *,
