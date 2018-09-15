@@ -10,7 +10,7 @@ title: "gawiga - developer"
         <h2 class="justify">Sobre mim</h2>
         
         <p class="justify">Olá mundo, meu nome é
-            <strong>Gabriel W. Galdino</strong>, tenho 24 anos, sou
+            <strong>Gabriel W. Galdino</strong>, tenho {{ site.idade }} anos, sou
             <strong>bacharel</strong> em Sistemas de Informação e
             <strong>tecnólogo</strong> em Gestão de TI. Criei este blog em
             <strong>Jekyll</strong>, fazendo um fork de um projeto do
@@ -21,21 +21,25 @@ title: "gawiga - developer"
         <p class="justify">Sempre estou disposto a aprender novas tecnologias, brincar e apanhar com elas para crescer profissionalmente e pessoalmente.
             Segue uma lista de algumas tecnologias com qual já tive algumas/muitas aventuras</p>
 
-        <!-- <h2 id="habilidades">Habilidades</h2>
-        {% include skills.html %} -->
+        <h2 id="habilidades">Habilidades</h2>
+        {% include skills.html %}
 
         <h2 id="postagens">Postagens</h2>
         <p class="justify">Algumas postagens pessoais que acho interessante compartilhar no mundo.</p> 
             {% include blog.html %}
         
         <h2 id="projetos">Projetos</h2>
-        <p class="justify">
-            <a href="https://github.com/Gawiga/DuPont">DuPont (2017)</a> - Trabalho de conclusão de curso, aonde criei um sistema que faz o cálculo da análise DuPont.
-            Pode ser utilizado por qualquer empresa. Esta análise é muito utilizada por investidores para o levantamento
-            de risco da empresa. O código fonte está no GitHub e livre para ser utilizado por todo mundo. :)
+        <p class="justify"><a href="http://www.viceri.com.br">Viceri (2018)</a> - Atualmente trabalho na sustentação de sistemas da seguradora Mapfre,
+            realizando análise de problemas e corrigindo erros em produção. 
+            Atuo tanto na parte de desenvolvimento web como em ETL utilizando o IBM InfoSphere DataStage®.
         </p>
         <p class="justify">
-            <a href="http://gawiga.wixsite.com/gawiga">Wix Developer (2017)</a> - Como desenvolvedor Wix certificado, fiz diversos sites com hospedagem gratuita para
+            <a href="https://github.com/Gawiga/DuPont">DuPont (2017)</a> - Trabalho de conclusão de curso, aonde criei um sistema que faz o cálculo da análise DuPont.
+            Pode ser utilizado por qualquer empresa. A análise é utilizada por investidores para o levantamento de risco da empresa. 
+            O código fonte está no GitHub e livre para ser utilizado por todo mundo. :)
+        </p>
+        <p class="justify">
+            <a href="http://gawiga.wixsite.com/gawiga">Wix Developer (2017)</a> - Com o construtor de site Wix, fiz alguns sites com hospedagem gratuita para
             diversas empresas. Segue um lista deles:</p>
             <ul class="doublecolumn">
                 <li>
@@ -65,7 +69,8 @@ title: "gawiga - developer"
             </ul>
 
         <p class="justify">
-            <a href="http://www.carsys.com.br/extranet/">Carsys (2016)</a> - O Carsys é um sistema utilizado por empresas que fazem vistorias de automóveis. Tive a oportunidade
+            <a href="http://www.carsys.com.br/extranet/">Carsys (2016)</a> - O Carsys é um sistema utilizado por empresas que fazem vistorias de automóveis. 
+            Tive a oportunidade
             de participar no desenvolvimento do sistema. Atualmente o sistema é usado por diversas prestadoras de seguros
             em todo Brasil.
         </p>
@@ -84,14 +89,19 @@ title: "gawiga - developer"
         <div id="google_translate_element" class="nav"></div>
         <h4 class="centralizado">I speak English too! :)
             <br/> And someday I will translate this blog...</h4>
-        <p>
-            <a href="https://jigsaw.w3.org/css-validator/">
+
+            <br/>
+        <p class="centralizado">
+            Validações são importantes, eu acho
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=gawiga.com&profile=css3svg">
                 <img style="border:0;width:88px;height:31px"
                     src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
                     alt="CSS válido!" />
             </a>
-        </p>
-        <h5 class="centralizado">Validações são importantes, eu acho.</h5>
+            <a href="https://developers.google.com/speed/pagespeed/insights/?url=www.gawiga.com&tab=mobile">PageSpeed do Google</a>
+            <br/>
+            <a class="centralizado" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.gawiga.com%2F">HTML</a>
+        </p>     
     </section>
 </main>
 <!-- {% for post in site.posts %}
