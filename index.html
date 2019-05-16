@@ -1,79 +1,13 @@
 --- 
 layout: default 
-title: "gawiga - developer" 
+title: "gawiga - desenvolvedor" 
 ---
 
 <main id="scroll" class="home" itemscope itemtype="http://schema.org/Blog">
     <section id="sobre" class="post-content" itemscope itemtype="http://schema.org/BlogPosting">
-        
-        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="Gabriel Galdino">
-        <h2 class="justify">Sobre mim</h2>
-        
-        <p class="justify">Olá mundo, meu nome é
-            <strong>Gabriel W. Galdino</strong>, tenho {{ site.idade }} anos, sou
-            <strong>bacharel</strong> em Sistemas de Informação e
-            <strong>tecnólogo</strong> em Gestão de TI. Criei este blog em
-            <strong>Jekyll</strong>, fazendo um fork de um projeto do
-            <strong>GitHub</strong>, utilizando
-            <strong>HTML, CSS, JS</strong> e outras peripécias da Web 2.0.
-        </p>
 
-        <p class="justify">Sempre estou disposto a aprender novas tecnologias, brincar e apanhar com elas para crescer profissionalmente e pessoalmente.
-            Segue uma lista de algumas tecnologias com qual já tive algumas/muitas aventuras</p>
-
-        <h2 id="habilidades">Habilidades</h2>
-        {% include skills.html %}
-
-        <h2 id="postagens">Postagens</h2>
-        <p class="justify">Algumas postagens pessoais que acho interessante compartilhar no mundo.</p> 
-            {% include blog.html %}
-        
-        <h2 id="projetos">Projetos</h2>
-        <p class="justify"><a href="http://www.viceri.com.br">Viceri (2018)</a> - Atualmente trabalho na sustentação de sistemas da seguradora Mapfre,
-            realizando análise de problemas e corrigindo erros em produção. 
-            Atuo tanto na parte de desenvolvimento web como em ETL utilizando o IBM InfoSphere DataStage®.
-        </p>
-        <p class="justify">
-            <a href="https://github.com/Gawiga/DuPont">DuPont (2017)</a> - Trabalho de conclusão de curso, aonde criei um sistema que faz o cálculo da análise DuPont.
-            Pode ser utilizado por qualquer empresa. A análise é utilizada por investidores para o levantamento de risco da empresa. 
-            O código fonte está no GitHub e livre para ser utilizado por todo mundo. :)
-        </p>
-        <p class="justify">
-            <a href="http://gawiga.wixsite.com/gawiga">Wix Developer (2017)</a> - Com o construtor de site Wix, fiz alguns sites com hospedagem gratuita para
-            diversas empresas. Segue um lista deles:</p>
-            <ul class="doublecolumn">
-                <li>
-                    <a href="http://gawiga.wixsite.com/funilariapitstop">Funilaria PitStop</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/sorvetejardimdolago">Sorveteria Natuice</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/casaderacaopavao">Casa de Ração Pavão</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/barbeariastyllus">Barbearia Styllus</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/padariasaojorge">Padaria São Jorge</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/amoab-jundiai">AMOAB Jundiaí</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/galdinodejundiai">Galdino de Jundiaí</a>
-                </li>
-                <li>
-                    <a href="http://gawiga.wixsite.com/dongaldino">Don Galdino</a>
-                </li>
-            </ul>
-
-        <p class="justify">
-            <a href="http://www.carsys.com.br/extranet/">Carsys (2016)</a> - O Carsys é um sistema utilizado por empresas que fazem vistorias de automóveis. 
-            Tive a oportunidade
-            de participar no desenvolvimento do sistema. Atualmente o sistema é usado por diversas prestadoras de seguros
-            em todo Brasil.
-        </p>
+        {% include sobre-mim.html %}
+        {% include blog.html %}
 
         <h2 id="contato">Contato</h2>
         <p class="justify">
@@ -84,13 +18,13 @@ title: "gawiga - developer"
 
         <h3 class="centralizado"><a href="#menu" data-scroll>voltar para o menu</a></h3>
 
-        <!-- <div class="centralizado">___________________________________________</div> -->
+        <div class="centralizado">___________________________________________</div>
 
         <div id="google_translate_element" class="nav"></div>
-        <h4 class="centralizado">I speak English too! :)
-            <br/> And someday I will translate this blog...</h4>
+        <h3 class="centralizado">I speak English too! :)
+            <br/> And someday I will translate this blog...
+        </h3>
 
-            <br/>
         <p class="centralizado">
             Validações são importantes, eu acho
             <a href="https://jigsaw.w3.org/css-validator/validator?uri=gawiga.com&profile=css3svg">
@@ -104,31 +38,3 @@ title: "gawiga - developer"
         </p>     
     </section>
 </main>
-<!-- {% for post in site.posts %}
-    <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-            <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
-                <meta itemprop="datePublished" content="{{post.date}}">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <span class="day">
-                        {{ post.date | date: "%d" }}
-                    </span>
-                    <span class="month-year">
-                        {{ post.date | date: "%B %Y" }}
-                    </span>
-                </time>
-            </a>
-            <div class="content">
-                <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
-                <p class="description">
-                    {{ post.content | strip_html | truncatewords:40 }}
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="link">Leia mais sobre {{post.title}}</a>
-                </p>
-
-                <div class="tags">
-                    {% for tag in post.tags %}
-                        <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-    </article>
-{% endfor %} -->
