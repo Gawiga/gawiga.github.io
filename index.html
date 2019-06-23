@@ -1,12 +1,26 @@
 ---
-layout: index
+layout: default
 title: "gawiga - desenvolvedor"
 ---
-<main >
-    <div class="link">
-    <a href="/curriculo">curriculo</a>
-    <a href="/blog">artigos</a>
-    <a href="/portfolio">portfolio</a>
-    <a href="/contato">contato</a>
-</div>
+{% include svg-icons.html %}
+{% include header-default.html %}
+<main id="scroll" class="home" itemscope itemtype="http://schema.org/Blog">
+    <section id="sobre" class="post-content" itemscope itemtype="http://schema.org/BlogPosting">
+
+        {% include sobre-mim.html %}
+        {% include blog.html %}
+
+        <h2 id="contato">Contato</h2>
+        <p class="justify">
+            Veja mais trabalhos meus através dos links nos
+            <strong>ícones</strong> <a href="#menu" data-scroll>no começo desta página</a>.
+            Se quiser entrar me contato é só mandar uma mensagem para <a
+                href="mailto:contato@gawiga.com">contato@gawiga.com</a>. 😊
+        </p>
+
+        <h3 class="centralizado"><a href="#menu" data-scroll>voltar para o menu</a></h3>
+        <p class="centralizado">
+            <a href="/backdoor" style="border-bottom: none; font-size: 3em;">🔓</a>
+        </p>
+    </section>
 </main>
