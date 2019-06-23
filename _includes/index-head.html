@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <link rel="shortcut icon" href="{{site.baseurl}}/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="{{ "/assets/css/bootstrap/bootstrap.min.css" | prepend: site.baseurl }}">
+    <script src="{{ "/assets/js/jquery-3.2.1.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/bootstrap/bootstrap.min.js" | prepend: site.baseurl }}"></script> -->
+</head>

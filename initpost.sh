@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # ------------------------------------------------------------------------------
 #
 # Program: initpost.sh
@@ -24,12 +23,9 @@
 #   - This script was created to generate new markdown files for my blog.
 #
 # ------------------------------------------------------------------------------
-
-
 # ------------------------------------------------------------------------------
 # | VARIABLES                                                                  |
 # ------------------------------------------------------------------------------
-
 # CORE: Do not change these lines
 # ----------------------------------------------------------------
 POST_TITLE="${@:2:$(($#-1))}"
@@ -37,16 +33,12 @@ POST_NAME="$(echo ${@:2:$(($#-1))} | sed -e 's/ /-/g' | sed "y/ABCDEFGHIJKLMNOPQ
 CURRENT_DATE="$(date +'%Y-%m-%d')"
 TIME=$(date +"%T")
 # ----------------------------------------------------------------
-
-
 # SETTINGS: your configuration goes here
 # ----------------------------------------------------------------
-
 # Set your destination folder
 BINPATH=$(cd `dirname $0`; pwd)
 POSTPATH="${BINPATH}/_posts"
 DRAFTPATH="${BINPATH}/_drafts"
-
 if [[ "${1}" == "-c" || "${1}" == "--create" ]]; then
     DIST_FOLDER="$POSTPATH"
     FILE_NAME="${CURRENT_DATE}-${POST_NAME}.md"
@@ -69,17 +61,14 @@ BLOG_URL="your_site"
 ASSETS_URL="assets/img/"
 # ----------------------------------------------------------------
 
-
-
 # ------------------------------------------------------------------------------
 # | UTILS                                                                      |
 # ------------------------------------------------------------------------------
 
 # Header logging
 e_header() {
-    printf "$(tput setaf 38)→ %s$(tput sgr0)\n" "$@"
+    printf "$(tput setaf 38)→ %s$(tput sgr0)\n" '$@'
 }
-
 # Success logging
 e_success() {
     printf "$(tput setaf 76)✔ %s$(tput sgr0)\n" "$@"

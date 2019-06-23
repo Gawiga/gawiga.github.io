@@ -1,0 +1,60 @@
+
+body {
+    background: #000;
+    text-align: center;
+    color: white;
+}
+
+
+footer {
+    font-family: 'Open Sans Light', sans-serif;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 0% 0% 2% 0%;
+}
+a {
+    color: red;
+    font-family: 'Open Sans Light', sans-serif;
+    font-weight: 100;
+    font-size: 3em;
+    font-style: normal;
+    background-color: #202020;
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    position: relative;
+    margin: 2% 0% 2% 0%;
+    /* border: 10px; */ 
+    display: block;
+}
+
+@media only screen and (min-width:40rem) {
+    a {
+        margin: 1% 10% 1% 10%;
+    }
+}
+
+@media only screen and (min-width:80rem) {
+    a {
+        margin: 1% 20% 1% 20%;
+    }
+}
+
+a:hover {
+    background-color: red;
+    color: yellow;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Open Sans Light'), 
+    local('OpenSans-Light'), 
+    url("https://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2") format('woff2');
+}

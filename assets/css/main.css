@@ -39,7 +39,7 @@ progress::-moz-progress-bar {
     text-align: justify;
 }
 
-.nav {
+nav {
     text-align: center;
     display: block;
     padding: 10px;
@@ -947,12 +947,12 @@ body {
 }
 
 .post-item {
-    text-align: left;
-    padding: 2.5rem 0;
-    border-bottom: 3px solid #f2f2f2;
+    text-align: center;
+    /* padding: 2.5rem 0; */
+    /* border-bottom: 3px solid #f2f2f2; */
     /* *zoom: 1; */
     width: auto;
-    max-width: 62.5rem;
+    max-width: 60rem;
     float: none;
     display: block;
     margin-right: auto;
@@ -971,7 +971,7 @@ body {
     clear: both
 }
 
-@media only screen and (max-width:62.5rem) {
+@media only screen and (max-width:60rem) {
     .post-item {
         padding-left: 1.25rem;
         padding-right: 1.25rem
@@ -1057,7 +1057,8 @@ body {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 82.83333333333334%;
+    /* width: 82.83333333333334%; */
+    width: 100%;
     margin-left: 0%;
     margin-right: 3%;
 }
