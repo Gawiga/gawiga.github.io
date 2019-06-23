@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Computação Distribuída, Blockchain e o poder na mão do Usuário"
+title: "Computação distribuída, blockchain e o poder na mão do usuário"
 date: 2018-03-01 11:06:23
 image: '/assets/img/'
 description:
