@@ -49,6 +49,14 @@ nav {
     height: auto;
 }
 
+.idiomas {
+    padding-top: 20px;
+}
+
+.idiomas img{
+    height: 32px;
+}
+
 .centralizado {
     text-align: center;
 }

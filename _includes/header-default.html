@@ -1,53 +1,59 @@
-<header class="header-site" >
-    {% include menu.html %}
-    <div class="content">
-        <h1>
-            <span class="site-title ">{{site.username}}</span>
-            <span class="site-description ubuntu">{{site.user_description}}</span>
-        </h1>
-        <div class="icons-home">
-            <a href="mailto:{{site.email}}">
-                <svg class="icon icon-email">
-                    <use xlink:href="#icon-email"></use>
-                </svg>
-            </a><!-- 
-            <a target="_blank" href="https://twitter.com/{{site.twitter_username}}">
-                <svg class="icon icon-twitter">
-                    <use xlink:href="#icon-twitter"></use>
-                </svg>
-            </a>
-            <a aria-label="Facebook" target="_blank" href="https://facebook.com/{{site.facebook_username}}">
-                <svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook"></use>
-                </svg>
-            </a> -->
-            <a target="_blank" href="https://github.com/{{site.github_username}}">
-                <svg class="icon icon-github-alt">
-                    <use xlink:href="#icon-github-alt"></use>
-                </svg>
-            </a>
-            <a target="_blank" href="https://www.behance.net/gawiga">
-                <svg class="icon icon-behance">
-                    <use xlink:href="#icon-behance"></use>
-                </svg>
-            </a>
-            <a target="_blank" href="https://linkedin.com/in/gawiga/">
-                <svg class="icon icon-linkedin">
-                    <use xlink:href="#icon-linkedin"></use>
-                </svg>
-            </a>
-
-            <!-- <a aria-label="Translate" target="_blank" href="javascript:googleTranslateElementInit(en);">
-                <svg class="icon icon-translate">
-                    <use xlink:href="#icon-translate"></use>
-                </svg>
-            </a> -->
-        </div>
+<div class="content">
+    <h1>
+        <span class="site-title ">{{site.username}}</span>
+        <span class="site-description ubuntu">{{site.user_description}}</span>
+    </h1>
+    <div class="icons-home">
+        <a href="mailto:{{site.email}}">
+            <svg class="icon icon-email">
+                <use xlink:href="#icon-email"></use>
+            </svg>
+        </a>
+        <a target="_blank" href="https://github.com/{{site.github_username}}">
+            <svg class="icon icon-github-alt">
+                <use xlink:href="#icon-github-alt"></use>
+            </svg>
+        </a>
+        <a target="_blank" href="https://www.behance.net/gawiga">
+            <svg class="icon icon-behance">
+                <use xlink:href="#icon-behance"></use>
+            </svg>
+        </a>
+        <a target="_blank" href="https://linkedin.com/in/gawiga/">
+            <svg class="icon icon-linkedin">
+                <use xlink:href="#icon-linkedin"></use>
+            </svg>
+        </a>
     </div>
-    <a role="button" class="down" data-scroll href="#scroll">
-        <svg class="icon icon-angle-down">
-            <use xlink:href="#icon-angle-down"></use>
-        </svg>
-    </a>
-    <!-- {% include menu-search.html %} -->
-</header>
+    <div class="idiomas">
+        {% if page.lang == "pt" %}
+        <a href="/en"><img src="assets/img/uk.png" alt="bandeira brasileira"></a> 
+        {% endif %}
+        {% if page.lang == "en" %}
+        <a href="/"><img src="assets/img/br.png" alt="flag of UK"></a> 
+        {% endif %}
+    </div>
+</div>
+<a role="button" class="down" data-scroll href="#scroll">
+    <svg class="icon icon-angle-down">
+        <use xlink:href="#icon-angle-down"></use>
+    </svg>
+</a>
+<!-- 
+{% include menu-search.html %} 
+<a target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+    <svg class="icon icon-twitter">
+        <use xlink:href="#icon-twitter"></use>
+    </svg>
+</a>
+<a aria-label="Facebook" target="_blank" href="https://facebook.com/{{site.facebook_username}}">
+    <svg class="icon icon-facebook">
+        <use xlink:href="#icon-facebook"></use>
+    </svg>
+</a> 
+<a aria-label="Translate" target="_blank" href="javascript:googleTranslateElementInit(en);">
+    <svg class="icon icon-translate">
+        <use xlink:href="#icon-translate"></use>
+    </svg>
+</a>
+-->
