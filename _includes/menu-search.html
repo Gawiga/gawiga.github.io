@@ -15,16 +15,19 @@
 <nav id="navigation">
   <h2>MENU</h2>
   <ul>
-    <!-- {% for link in site.links %}
+    {% for link in site.links %}
     {% if link.external %}
       <li><a href="{{ link.url }}">{{ link.title }}</a></li>
     {% else %}
-      <li><a href="{{ site.url | append: link.url }}">{{ link.title }}</a></li>
+      <li><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
     {% endif %}
-    {% endfor %} -->
+    {% endfor %}
     <li><a href="{{ site.url }}" title="Ínicio">Ínicio</a></li>
     <li><a href="{{ site.url | append: "/blog" }}" title="Blog">Blog</a></li>
     <li><a href="{{ site.url | append: "/backdoor" }}" title="Experimentos">Experimentos</a></li>
+    <li><a href="https://gawiga.com/" title="Ínicio">Ínicio</a></li>
+    <li><a href="https://gawiga.com/blog" title="Blog">Blog</a></li>
+    <li><a href="https://gawiga.com/backdoor" title="Experimentos">Experimentos</a></li>
     <li><a class="feed" href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
