@@ -1,11 +1,13 @@
-<h2 id="contato">{{ site.[page.lang].contato | capitalize}}</h2>
-<p class="justify">
-    Veja mais trabalhos meus através dos links nos
-    <strong>ícones</strong> <a href="#menu" data-scroll>no começo desta página</a>.
-    Se quiser entrar me contato é só mandar uma mensagem para <a
-        href="mailto:contato@gawiga.com">contato@gawiga.com</a>. 😊
+<h2 id="contato">{{ site.[page.lang].contato | capitalize}} ☎️</h2>
+
+{% if page.lang == "pt" %} 
+<p class="justify">Precisa de alguma ajuda? 
+    Quer tirar alguma dúvida? Não hesite em me contatar. Me mande um <a href="mailto:contato@gawiga.com">e-mail</a> ou se preferir entre em contato comigo pelas <a href="#" data-scroll>redes sociais</a>. 😊
 </p>
-<h3 class="centralizado"><a href="#menu" data-scroll>voltar para o menu</a></h3>
-<p class="centralizado">
-    <a href="/backdoor" style="border-bottom: none; font-size: 3em;">🔓</a>
-</p>
+{% endif %}
+
+{% if page.lang == "en" %}
+<p class="justify">Do you need any help? 
+    Want to ask any questions? Do not hesitate to contact me. Send me an <a href="mailto:contato@gawiga.com">e-mail</a> or if you prefer contact me on <a href="#" data-scroll>social networks</a>. 😊
+    </p>
+{% endif %}

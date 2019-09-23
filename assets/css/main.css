@@ -39,7 +39,7 @@ progress::-moz-progress-bar {
     text-align: justify;
 }
 
-nav {
+/* nav {
     text-align: center;
     display: block;
     padding: 10px;
@@ -47,7 +47,7 @@ nav {
     background: #ffffff;
     font-size: 24px;
     height: auto;
-}
+} */
 
 .idiomas {
     padding-top: 20px;
@@ -72,10 +72,10 @@ nav {
 .pequeno {
     font-size: 14px;
 }
-
+/* 
 li {
     list-style: none;
-}
+} */
 /* css + ou - original */
 
 html {
@@ -490,7 +490,7 @@ a.slideButton,
 
 .dosearch {
     right: 10px;
-    background: #0558c6;
+    background: #004E37;
     border-radius: .188rem;
     padding: .125rem .188rem
 }
@@ -499,7 +499,7 @@ a.slideButton,
     cursor: pointer;
     padding: .313rem;
     border-radius: .188rem;
-    background: #0558c6;
+    background: #004E37;
     width: 2.5rem;
     height: 2.5rem;
     fill: #fff
@@ -957,9 +957,9 @@ body {
 
 .post-item {
     text-align: center;
-    /* padding: 2.5rem 0; */
-    /* border-bottom: 3px solid #f2f2f2; */
-    /* *zoom: 1; */
+    padding: 2rem 0;
+    border-bottom: 3px solid #f2f2f2;
+    zoom: 1;
     width: auto;
     max-width: 60rem;
     float: none;
@@ -1104,7 +1104,12 @@ body {
 }
 
 .post-item .content a {
-    text-decoration: none
+    text-decoration: none;
+}
+
+.post-item .content h2:hover {
+    color: #6aaaff;
+    
 }
 
 .post-item .content .date {

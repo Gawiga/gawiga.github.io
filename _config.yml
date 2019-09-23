@@ -7,8 +7,8 @@ enforce_ssl: gawiga.com
 
 # configurações do usuário
 username: Gawiga
-user_description: developer 
-user_title: developer
+# user_description: desenvolvedor
+# user_title: developer
 email: contato@gawiga.com
 twitter_username: gawiga
 github_username:  gawiga
@@ -16,13 +16,12 @@ facebook_username:  gawiga
 disqus_username: gawiga
 idade: 26
 nome: Gabriel W. Galdino
-version: 0.1.2
+version: 0.2.0
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-
 
 # html minify
 compress_html:
@@ -36,23 +35,29 @@ compress_html:
 links:
   - title: Início
     url: /
-  - title: Portfolio
-    url: /series
-  - title: Sobre mim
-    url: /about
+  - title: Blog
+    url: /blog
+  - title: Experimentos
+    url: /backdoor
+  # - title: Portfolio
+  #   url: /series
 
 pt:
   sobremim: Sobre mim 
   sobre: sobre
   postagens: postagens
   contato: contato
+  servicos: serviços
+  descricao: desenvolvedor
+  pesquisar: pesquisar
 en:
   sobre: about
   sobremim: About me
   postagens: posts
   contato: contact
-
+  servicos: services
+  descricao: developer
+  pesquisar: search
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
-
