@@ -2,7 +2,7 @@
 title: gawiga
 description: um blog, um site, uma parte de mim, na internet.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://gawiga.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: http://gawiga.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 enforce_ssl: gawiga.com
 
 # configurações do usuário
