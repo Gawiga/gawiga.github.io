@@ -7,8 +7,8 @@ enforce_ssl: gawiga.com
 
 # configurações do usuário
 username: Gawiga
-# user_description: desenvolvedor
-# user_title: developer
+user_description: desenvolvedor
+user_title: developer
 email: contato@gawiga.com
 twitter_username: gawiga
 github_username:  gawiga
