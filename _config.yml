@@ -39,9 +39,8 @@ links:
     url: /blog
   - title: Experimentos
     url: /backdoor
-  # - title: Portfolio
-  #   url: /series
 
+# Translate
 pt:
   sobremim: Sobre mim 
   sobre: sobre
