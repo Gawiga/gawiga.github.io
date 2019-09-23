@@ -815,8 +815,15 @@ body.search-overlay:after {
 }
 
 .img-rounded {
-    border-radius: 50%
+    border-radius: 10%;
+    filter: grayscale(100%);
+    border: 2px solid #004E37;
 }
+.img-rounded:hover {
+    filter: grayscale(0%);
+    animation: pulse 3s infinite;
+}
+
 
 html,
 body {
