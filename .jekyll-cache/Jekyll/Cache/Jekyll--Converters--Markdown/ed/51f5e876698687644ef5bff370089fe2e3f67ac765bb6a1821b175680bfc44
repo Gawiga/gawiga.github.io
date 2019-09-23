@@ -1,0 +1,71 @@
+I"<h2 id="mostrando-o-código">Mostrando o código</h2>
+
+<p>Criando uma conexão com <code class="highlighter-rouge">Oracle Client</code> usando C#
+Abaixo segue o código utilizado para a criação de um cliente de acesso ao Oracle.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">//criamos a classe conexao</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Conexao</span>
+<span class="p">{</span>
+    <span class="c1">//começamos com uma variável estática para acessar a conexão com o banco</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">OracleConnection</span> <span class="n">sqlConn</span><span class="p">;</span>
+
+    <span class="c1">//neste caso como usamos a mesma classe para acessar múltiplos bancos</span>
+    <span class="c1">//criamos um método que retorna vazio e recebe o parâmetro DBschema</span>
+    <span class="c1">//que será o caminho da String de Conexão aonde está localizado o banco</span>
+    <span class="c1">//e adicionamos esse caminho a ConnectionString da variável instânciada anteriormente</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">DBConnection</span><span class="p">(</span><span class="kt">string</span> <span class="n">DBschema</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">string</span> <span class="n">schema</span> <span class="p">=</span> <span class="s">"'"</span> <span class="p">+</span> <span class="n">DBschema</span> <span class="p">+</span> <span class="s">"'"</span><span class="p">;</span>
+        <span class="n">sqlConn</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OracleConnection</span><span class="p">();</span>
+        <span class="n">sqlConn</span><span class="p">.</span><span class="n">ConnectionString</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">schema</span><span class="p">].</span><span class="n">ConnectionString</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//metódo para abrir a conexão</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">openConnection</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">sqlConn</span><span class="p">.</span><span class="nf">Open</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">//método para fecha a conexão</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">closeConnection</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">sqlConn</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">//método estático que retorna a conexão dentro da classe OracleConnection</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">OracleConnection</span> <span class="n">Connection</span>
+    <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">sqlConn</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//variável estática do tipo OracleTransaction e depois o método estático</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">OracleTransaction</span> <span class="n">transaction</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">OracleTransaction</span> <span class="n">Transaction</span>
+    <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">transaction</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//metódo para começar a transação</span>
+    <span class="k">public</span> <span class="n">OracleTransaction</span> <span class="nf">BeginTransaction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">transaction</span> <span class="p">=</span> <span class="n">sqlConn</span><span class="p">.</span><span class="nf">BeginTransaction</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">transaction</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//método que dá o commit da transação</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Commit</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">transaction</span><span class="p">.</span><span class="nf">Commit</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="p">.</span><span class="nf">Dispose</span><span class="p">();</span>
+        <span class="n">transaction</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//método que dá o rollback da transação</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">RollBack</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">transaction</span><span class="p">.</span><span class="nf">Rollback</span><span class="p">();</span>
+        <span class="n">transaction</span><span class="p">.</span><span class="nf">Dispose</span><span class="p">();</span>
+        <span class="n">transaction</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+:ET
