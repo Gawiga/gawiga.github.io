@@ -10,6 +10,6 @@ permalink: /sitemap.xml
 	  </url>
 	{% endfor %}
 	<url>
-		<loc>{{ site.url }}/curiojundiai</loc>
+		<!-- <loc>{{ site.url }}/curiojundiai</loc> -->
 	</url>
 </urlset>
