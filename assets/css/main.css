@@ -464,8 +464,13 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    cursor: url(../img/game.cur), default;
+    cursor: url(../img/sword.cur), default;
 }
+
+a {
+    cursor: url(../img/hand.cur), default;
+}
+
 
 a,
 aside,
