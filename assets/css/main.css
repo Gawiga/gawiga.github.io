@@ -464,7 +464,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    cursor: url(../img/sword.cur), default;
+    cursor: url(../img/cursor-aoe.cur), default;
 }
 
 a {
