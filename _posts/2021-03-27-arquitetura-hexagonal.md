@@ -22,25 +22,28 @@ Em minhas últimas postagens, tenho escrito sobre muitos dos conceitos e princí
 
 O post de hoje é sobre como encaixar todas essas peças e, como parece que devo dar um nome, chamo-a de **Arquitetura Explícita**. Além disso, todos esses conceitos *“passaram em seus testes de batalha”* e são usados ​​no código de produção em plataformas altamente exigentes. Uma delas é uma plataforma SaaS com milhares de lojas virtuais em todo o mundo, a outra é um marketplace, em 2 países com um message bus que lida com mais de 20 milhões de mensagens por mês.
 
-1. [Fundamental blocks of the system](#blocos-fundamentais-do-sistema)
-Tools
-Connecting the tools and delivery mechanisms to the Application Core
-Ports
-Primary or Driving Adapters
-Secondary or Driven Adapters
-Inversion of control
-Application Core Organisation
-Application Layer
-Domain Layer
-Domain Services
-Domain Model
-Components
-Decoupling the components
-Triggering logic in other components
-Getting data from other components
-Data storage shared between components
-Data storage segregated per component
-Flow of control
+- [Blocos fundamentais do sistema](#blocos-fundamentais-do-sistema)
+- [Ferramentas](#ferramentas)
+- [Conectando as ferramentas e mecanismos de entrega ao Application Core](#conectando-as-ferramentas-e-mecanismos-de-entrega-ao-application-core)
+  - [Ports (Portas)](#ports-portas)
+  - [Adaptadores primários ou de acionamento](#adaptadores-primários-ou-de-acionamento)
+  - [Adaptadores secundários ou acionados](#adaptadores-secundários-ou-acionados)
+  - [Invesão de controle](#invesão-de-controle)
+- [Organização do Application Core](#organização-do-application-core)
+  - [Camada da Aplicação](#camada-da-aplicação)
+- [Camada de Domínio](#camada-de-domínio)
+  - [Serviços de Domínio](#serviços-de-domínio)
+  - [Modelo de Domínio](#modelo-de-domínio)
+- [Componentes](#componentes)
+  - [Dissociando os componentes](#dissociando-os-componentes)
+  - [Lógica de disparo em outros componentes](#lógica-de-disparo-em-outros-componentes)
+- [Obtendo dados de outros componentes](#obtendo-dados-de-outros-componentes)
+  - [Armazenamento de dados compartilhado entre componentes](#armazenamento-de-dados-compartilhado-entre-componentes)
+  - [Armazenamento de dados segregado por componente](#armazenamento-de-dados-segregado-por-componente)
+- [Fluxo de Controle](#fluxo-de-controle)
+  - [Sem um barramento de Command/Query](#sem-um-barramento-de-commandquery)
+- [Com um barramento de Command/Query](#com-um-barramento-de-commandquery)
+- [Conclusão](#conclusão)
 
 ## Blocos fundamentais do sistema
 
