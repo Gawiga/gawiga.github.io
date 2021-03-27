@@ -1167,7 +1167,6 @@ body {
 .post-content h2,
 .post-content h3,
 .post-content h4,
-.post-content ul,
 .post-content ol,
 .post-content .tags,
 .post-content iframe {
@@ -1188,6 +1187,10 @@ body {
     font-size: 1.125rem;
     line-height: 2;
     letter-spacing: .01rem;
+}
+
+.post-content ul {
+    margin: 0;
 }
 
 .post-content p:before,
