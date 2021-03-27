@@ -3,11 +3,11 @@ layout: post
 title: "DDD, Hexagonal, Onion, Clean, CQRS, Como eu coloquei tudo isso junto"
 date: 2021-03-27
 image: '/assets/img/'
-description: Arquitetura Hexagonal
+description: Arquitetura Explícita
 tags: 
 categories: traducoes
 twitter_text: 
-permalink: /blog/arquitetura-hexagonal
+permalink: /blog/arquitetura-explicita
 ---
 
 > Este artigo é uma tradução do [artigo original](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/) do Heberto Graca. Todos as referências neste artigo são direcionadas aos links originais. Traduzir artigos técnicos não é algo fácil, decidi manter alguns estrangeirismos para facilitar a compreensão do texto e a busca deles para quem ainda não conhece os termos. Caso tenha alguma sugestão que torne o artigo mais fácil para ser compreendido sinta-se livre para deixar um comentário.
@@ -179,7 +179,11 @@ O Modelo de Domínio também é onde os Eventos de Domínio “vivem”. Esses e
 
 Até agora, estivemos segregando o código com base em camadas, mas essa é a segregação de código de baixa granularidade. A segregação grosseira de código é pelo menos tão importante e se trata de segregar o código de acordo com subdomínios e contextos limitados ([Bounded Context](http://ddd.fed.wiki.org/view/welcome-visitors/view/domain-driven-design/view/bounded-context)), seguindo as ideias de Robert C. Martin expressas em [Screaming Architecture](https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html). Isso é frequentemente referido como *"Pacote por recurso"* ou *"Pacote por componente"* em oposição a *"Pacote por camada"*, e é muito bem explicado por Simon Brown em sua postagem no blog “[Package by component and architecturally-aligned testing](http://www.codingthearchitecture.com/2015/03/08/package_by_component_and_architecturally_aligned_testing.html)“:
 
-![Pacote por Recursos](https://herbertograca.files.wordpress.com/2017/11/20150308-package-by-feature.png?w=362&h=362&crop=1)
+![Pacote por Camada](https://herbertograca.files.wordpress.com/2017/11/20150308-package-by-layer.png)
+
+![Pacote por Recursos](https://herbertograca.files.wordpress.com/2017/11/20150308-package-by-feature.png)
+
+![Pacote por Componente](https://herbertograca.files.wordpress.com/2017/11/20150308-package-by-component.png)
 
 Eu sou um defensor da abordagem "Pacote por componente" e, pegando no diagrama de Simon Brown sobre Pacote por componente, eu descaradamente o mudaria para o seguinte:
 
@@ -276,12 +280,12 @@ Como você pode ver, em ambos os casos todas as setas, as dependências, que cru
 
 O objetivo, como sempre, é ter uma base de código desacoplada e altamente coesa, para que as alterações sejam fáceis, rápidas e seguras de fazer.
 
-> Os planos não valem nada, mas o planejamento é tudo. - Eisenhower
+> "Os planos não valem nada, mas o planejamento é tudo." - Eisenhower
 
 Este infográfico é um mapa conceitual. Conhecer e compreender todos esses conceitos nos ajudará a planejar uma arquitetura saudável, uma aplicaticação saudável.
 No entanto:
 
-> O mapa não é o territorio. - Alfred Korzybski
+> "O mapa não é o territorio." - Alfred Korzybski
 
 O que significa que tudo isso, **são apenas diretrizes**! A aplicação é o território, a realidade, o caso de uso concreto onde precisamos aplicar nosso conhecimento, e é isso que vai definir como será a arquitetura real!
 
@@ -289,5 +293,6 @@ O que significa que tudo isso, **são apenas diretrizes**! A aplicação é o te
 
 É isso, é assim que eu entendo tudo. É assim que racionalizo na minha cabeça.
 Expandi essas ideias um pouco mais em uma postagem de acompanhamento: [More than concentric layers.](https://herbertograca.com/2018/07/07/more-than-concentric-layers/)
+
 No entanto, como tornamos tudo isso explícito na base de código? Esse é o assunto de um dos meus próximos posts: como refletir a arquitetura e o domínio, no código.
 Por último, mas não menos importante, obrigado ao meu colega [Francesco Mastrogiacomo](https://www.linkedin.com/in/francescomastrogiacomo/), por me ajudar a deixar meu infográfico bonito. 🙂
