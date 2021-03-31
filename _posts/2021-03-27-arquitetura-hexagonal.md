@@ -28,7 +28,7 @@ O post de hoje é sobre como encaixar todas essas peças e, como parece que devo
   - [Ports (Portas)](#ports-portas)
   - [Adaptadores primários ou de acionamento](#adaptadores-primários-ou-de-acionamento)
   - [Adaptadores secundários ou acionados](#adaptadores-secundários-ou-acionados)
-  - [Invesão de controle](#invesão-de-controle)
+  - [Inversão de controle](#inversão-de-controle)
 - [Organização do Application Core](#organização-do-application-core)
   - [Camada da Aplicação](#camada-da-aplicação)
 - [Camada de Domínio](#camada-de-domínio)
@@ -107,7 +107,7 @@ Agora criamos um adaptador específico para MySQL que implementará essa interfa
 
 Se em algum ponto decidirmos mudar o fornecedor do banco de dados, digamos para PostgreSQL ou MongoDB, precisamos apenas criar um novo adaptador que implemente a interface de persistência e seja específico para PostgreSQL, e injetar o novo adaptador em vez do antigo.
 
-### Invesão de controle
+### Inversão de controle
 
 Uma característica a ser observada sobre esse padrão é que os Adaptadores dependem de uma ferramenta específica e de uma Porta específica (por meio da implementação de uma interface). Mas nossa lógica de negócios depende apenas da Porta (interface), que é projetada para atender às necessidades da lógica de negócios, portanto, não depende de um adaptador ou ferramenta específica.
 
