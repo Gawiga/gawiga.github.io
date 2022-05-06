@@ -32,7 +32,10 @@ Enfim, vale a pena se apronfundar nesse assunto, até como consumidores podemos 
 Para saber mais, pesquise em seu agregador de busca preferido, rs. 
 Brincadeira, segue algumas referência para se aprofundar, em inglês.
 
-https://medium.com/adventures-in-consumer-technology/what-is-the-difference-between-an-aggregator-and-a-platform-8889e437ba8
-https://medium.com/adventures-in-consumer-technology/threes-company-of-shopify-amazon-and-etsy-4f0388c47c91
-https://stratechery.com/2019/shopify-and-the-power-of-platforms/
-https://stratechery.com/2022/beyond-aggregation-amazon-as-a-service/
+[what-is-the-difference-between-an-aggregator-and-a-platform](https://medium.com/adventures-in-consumer-technology/what-is-the-difference-between-an-aggregator-and-a-platform-8889e437ba8)
+
+[threes-company-of-shopify-amazon-and-etsy](https://medium.com/adventures-in-consumer-technology/threes-company-of-shopify-amazon-and-etsy-4f0388c47c91)
+
+[shopify-and-the-power-of-platforms](https://stratechery.com/2019/shopify-and-the-power-of-platforms/)
+
+[beyond-aggregation-amazon-as-a-service](https://stratechery.com/2022/beyond-aggregation-amazon-as-a-service/)
