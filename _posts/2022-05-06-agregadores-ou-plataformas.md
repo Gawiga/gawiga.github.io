@@ -11,26 +11,26 @@ permalink: /blog/agregadores-ou-plataformas
 ---
 
 # Entre agregadores e plataformas
-Recentemente esbarrei na [Teoria de Agregadores](https://stratechery.com/aggregation-theory/), difundida pelo Ben Thompson. 
 
-Com a internet, **agregadores** se tornaram muito poderosos, controlado o lado da demanda, ao invés da oferta. Uma inversão do monopólio clássico, aonde uma empresa controla toda a oferta e a demanda é limitada por este. 
+Recentemente esbarrei na [Teoria de Agregadores](https://stratechery.com/aggregation-theory/), difundida pelo Ben Thompson.
 
-Facebook, Google, não controlam toda a oferta de redes socials e mecanismos de buscas, existe Twitter, Tiktok, Bing, DuckDuckGo, porém estes concorretes tem dificuldades em disputar o mercado de rede sociais e de busca, porque a demanda está represada com essas grandes empresas.
+Com a internet, ****agregadores**** se tornaram muito poderosos, controlado o lado da demanda, ao invés da oferta. Uma inversão do monopólio clássico, aonde uma empresa controla toda a oferta e a demanda é limitada por este.
+
+Facebook, Google, não controlam toda a oferta de redes sociais e mecanismos de buscas, existe Twitter, Tiktok, Bing, DuckDuckGo, porém estes concorrentes têm dificuldades em disputar o mercado de redes sociais e de busca, porque a demanda está represada com essas grandes empresas.
 
 A demanda seria nós, os usuários, que não queremos utilizar 20 serviços com a mesma finalidade. Faço uma conta no gmail e pronto, consigo ter uma experiência melhor no YouTube, Maps, Google, PlayStore, Drive, etc.
 
 Com isso, damos mais poder as estes agregadores, que com o monopólio do mercado de buscas por exemplo, começa a ditar as regras para outras empresas, dão dicas do que fazer para que a sua empresa apareça no primeiro lugar no buscador deles, e claro, começam a cobrar por isso. Sem concorrência neste espaço privado, o valor é ditado por eles.
 
-**Plataformas** são diferentes, parecido, mas diferentes.
+****Plataformas**** são diferentes, parecido, mas diferentes.
 
 Plataformas permitem que outras empresas construam seus negócios sobre elas. Microsoft criou o Windows, que basicamente possui uma grande fatia do mercado de sistemas operacionais de computadores de mesa. O Windows permitiu que outras empresas surgissem e gerassem valor para outras pessoas e outras empresas.
 
-Shopify e Loja Integrada, são exemplos de plataformas, que ajudam outras pessoas e empresas a criarem a sua própria loja online. Aonde plataformas são de ganha-ganha, os agregadores tendem a concentrar todo lucro somente para si, forçando fornecedores a diminiurem suas margens devido ao grande volume da demanda agregada que possuem, Amazon por exemplo.
+Shopify e Loja Integrada, são exemplos de plataformas, que ajudam outras pessoas e empresas a criarem a sua própria loja online. Aonde plataformas são de ganha-ganha, os agregadores tendem a concentrar todo lucro somente para si, forçando fornecedores a diminuem suas margens devido ao grande volume da demanda agregada que possuem, Amazon por exemplo.
 
-Enfim, vale a pena se apronfundar nesse assunto, até como consumidores podemos escolher agregadores no dia-a-dia que sejam mais humano e promovam um ambiente saudável para fornecedores e consumidores.
+Enfim, vale a pena se aprofundar nesse assunto, até como consumidores podemos escolher agregadores no dia a dia que sejam mais humano e promovam um ambiente saudável para fornecedores e consumidores.
 
-Para saber mais, pesquise em seu agregador de busca preferido, rs. 
-Brincadeira, segue algumas referência para se aprofundar, em inglês.
+Para saber mais, pesquise em seu agregador de busca preferido, rs. Brincadeira, segue algumas referências para se aprofundar, em inglês.
 
 [what-is-the-difference-between-an-aggregator-and-a-platform](https://medium.com/adventures-in-consumer-technology/what-is-the-difference-between-an-aggregator-and-a-platform-8889e437ba8)
 
