@@ -3,3 +3,5 @@ _site
 node_modules
 _drafts
 .jekyll-cache
+vendor
+bundle
