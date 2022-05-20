@@ -14,7 +14,7 @@ permalink: /blog/agregadores-ou-plataformas
 
 Recentemente esbarrei na [Teoria de Agregadores](https://stratechery.com/aggregation-theory/), difundida pelo Ben Thompson.
 
-Com a internet, ****agregadores**** se tornaram muito poderosos, controlado o lado da demanda, ao invés da oferta. Uma inversão do monopólio clássico, aonde uma empresa controla toda a oferta e a demanda é limitada por este.
+Com a internet, **agregadores*** se tornaram muito poderosos, controlado o lado da demanda, ao invés da oferta. Uma inversão do monopólio clássico, aonde uma empresa controla toda a oferta e a demanda é limitada por este.
 
 Facebook, Google, não controlam toda a oferta de redes sociais e mecanismos de buscas, existe Twitter, Tiktok, Bing, DuckDuckGo, porém estes concorrentes têm dificuldades em disputar o mercado de redes sociais e de busca, porque a demanda está represada com essas grandes empresas.
 
@@ -22,7 +22,7 @@ A demanda seria nós, os usuários, que não queremos utilizar 20 serviços com 
 
 Com isso, damos mais poder as estes agregadores, que com o monopólio do mercado de buscas por exemplo, começa a ditar as regras para outras empresas, dão dicas do que fazer para que a sua empresa apareça no primeiro lugar no buscador deles, e claro, começam a cobrar por isso. Sem concorrência neste espaço privado, o valor é ditado por eles.
 
-****Plataformas**** são diferentes, parecido, mas diferentes.
+**Plataformas** são diferentes, parecido, mas diferentes.
 
 Plataformas permitem que outras empresas construam seus negócios sobre elas. Microsoft criou o Windows, que basicamente possui uma grande fatia do mercado de sistemas operacionais de computadores de mesa. O Windows permitiu que outras empresas surgissem e gerassem valor para outras pessoas e outras empresas.
 
