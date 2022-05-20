@@ -39,22 +39,13 @@ progress::-moz-progress-bar {
     text-align: justify;
 }
 
-/* nav {
-    text-align: center;
-    display: block;
-    padding: 10px;
-    font-family: 'Open Sans Light', sans-serif;
-    background: #ffffff;
-    font-size: 24px;
-    height: auto;
-} */
-
 .idiomas {
     padding-top: 20px;
 }
 
 .idiomas img{
     height: 32px;
+    width: auto;
 }
 
 .centralizado {
