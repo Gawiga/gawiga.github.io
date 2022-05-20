@@ -303,6 +303,7 @@ a {
     font-family: 'Open Sans Light';
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
     src: local('Open Sans Light'), 
     local('OpenSans-Light'), 
     url("https://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2") format('woff2');
@@ -312,6 +313,7 @@ a {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 200;
+    font-display: swap;
     src: local('Open Sans Normal'), 
     local('OpenSans-Normal'), 
     url("https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2") format('woff2');
@@ -321,6 +323,7 @@ a {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
+    font-display: swap;
     src: local('Open Sans Extrabold'), 
     local('OpenSans-Extrabold'), 
     url("https://fonts.gstatic.com/s/opensans/v10/EInbV5DfGHOiMmvb1Xr-hiYtBUPDK3WL7KRKS_3q7OE.woff2") format('woff2');
@@ -338,6 +341,7 @@ a {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: local('Ubuntu Light'), 
     local('Ubuntu-Light'), 
     url("https://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzjsGyN.woff2") format('woff2');
