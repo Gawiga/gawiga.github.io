@@ -25,7 +25,12 @@ Outros pontos apontando são Seguro, Financiamento e Educação, mas quando entr
 
 Quem se responsabiliza por fraudes? Quem tem a autoridade para aprovar ou rejeitar algo? Sei que isso poderia ser feito através de Smart Contracts e através de uma governança descentralizada, mas esse é justamente o meu ponto.
 
+## Sobre rentistas
+
+Uma pausa para falar sobre rentistas. Os agentes econômicos estão sempre em busca de um renda constante e segura, sendo assim vemos que não há nada mais seguro que o governo e nada mais constantes na vida do que imposto, logos os agentes tentam manipular o governo na aprovação de regulações e regras que os beneficiem, existe até um nome para isso, *rent seeking*. O *rent seeking*, só é possível pois existe uma centralização do poder, a única forma de combatê-lo de vez é através da descentralização do poder.
+
+## Conclusão
+
 Falamos o tempo todo de **Blockchain**, sendo que este é apenas uma ferramenta para a **Governança Descentralizada**. O Vitalik, co-criado do Ethereum, vem trazendo [bons artigos](https://vitalik.ca/general/2017/12/17/voting.html) a respeito disso.
 
 Como financiamos instituições descentralizadas? Como resolvemos conflitos e fraudes? Penso que essas questões e muitas outras não podem e não devem ser respondida com um simples "Blockchain". Precisamos evoluir o assunto na Web3. **Blockchain pode ser o princípio, mas não deve ser o fim.**
-
