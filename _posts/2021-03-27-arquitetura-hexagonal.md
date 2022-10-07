@@ -3,11 +3,8 @@ layout: post
 title: "DDD, Hexagonal, Onion, Clean, CQRS, Como eu coloquei tudo isso junto"
 date: 2021-03-27
 image: '/assets/img/'
-description: Arquitetura Explícita
-tags: 
-categories: traducoes
-twitter_text: 
 permalink: /blog/arquitetura-explicita
+description: Arquitetura Explícita
 ---
 
 > Este artigo é uma tradução do [artigo original](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/) do Heberto Graca. Todos as referências neste artigo são direcionadas aos links originais. Traduzir artigos técnicos não é algo fácil, decidi manter alguns estrangeirismos para facilitar a compreensão do texto e a busca deles para quem ainda não conhece os termos. Caso tenha alguma sugestão que torne o artigo mais fácil para ser compreendido sinta-se livre para deixar um comentário.

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Serverless"
-date: 2022-10-07
+date: 2020-10-07
 image: '/assets/img/'
-description: Serverless e o futuro da computação sem custos
-tags: politica
-categories: artigos
 permalink: /blog/serverless
+description: Serverless e o futuro da computação sem custos
 ---
 
 Eu gosto sempre de tentar prever o futuro, mesmo que seja algo difícil de acertar, acho divertido olhar para o passado e o para o presente e ver qual a trilha que parece que o mundo vai seguir.

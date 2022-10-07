@@ -3,11 +3,8 @@ layout: post
 title: "Blockchain ou Governança Descentralizada"
 date: 2022-02-16
 image: '/assets/img/'
-description: Esqueça blockchain, o que você procura é governança descentralizada
-tags: 
-categories: artigos
-twitter_text: 
 permalink: /blog/blockchain-ou-governanca-descentralizada
+description: Esqueça blockchain, o que você procura é governança descentralizada
 ---
 Muito se fala hoje em dia de **Blockchain**, sendo que o blockchain nada mais é que uma base de dados de anexação (append only log), aonde essa inserção de dados é feita através de um consenso (PoW, PoS, etc), podendo ter ou não um token nativo (Ethereum/Hyperledger) e podendo ser pública ou privada (permissioned/permissionless).
 

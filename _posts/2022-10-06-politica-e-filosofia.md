@@ -3,11 +3,8 @@ layout: post
 title: "Política e Filosofia"
 date: 2022-10-06
 image: '/assets/img/'
-description: Porque os princípios filosóficos são a base da discordância política
-tags: politica
-categories: artigos
-twitter_text: 
 permalink: /blog/politica-e-filosofia
+description: Porque os princípios filosóficos são a base da discordância política
 ---
 
 *“O homem é um animal político”* já dizia Aristóteles, viver é se posicionar de alguma forma. Entre tempos de polarização política, acho bom refletir quais caminhos alguém deve tomar para si, ir para esquerda? Para direita? Seguir firme ao centro?

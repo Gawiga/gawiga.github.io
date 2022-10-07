@@ -3,11 +3,8 @@ layout: post
 title: "Minha visão sobre investimentos"
 date: 2022-09-12
 image: '/assets/img/'
-description: Investindo um pouco além de ETFs e Títulos públicos
-tags: 
-categories: artigos
-twitter_text: 
 permalink: /blog/investimentos
+description: Investindo um pouco além de ETFs e Títulos públicos
 ---
 
 > Atenção, esse artigo não é uma dica de investimento, apenas um relato da minha jornada até o momento.

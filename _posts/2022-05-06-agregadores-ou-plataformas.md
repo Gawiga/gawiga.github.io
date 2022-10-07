@@ -3,11 +3,8 @@ layout: post
 title: "Agregadores ou Plataformas"
 date: 2022-05-06
 image: '/assets/img/'
-description: Como as big techs dominam o mercado e criam monopólios em uma rede descentralizada
-tags: 
-categories: artigos
-twitter_text: 
 permalink: /blog/agregadores-ou-plataformas
+description: Como as big techs dominam o mercado e criam monopólios em uma rede descentralizada
 ---
 
 # Entre agregadores e plataformas
