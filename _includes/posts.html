@@ -9,7 +9,7 @@
             </h2>
         </a>
         <p class="description justify">
-            {{ post.content | strip_html | truncatewords:60 }}
+            {{ post.content | strip_html | truncate:170 }}
             <a href="{{ post.url | prepend: site.baseurl }}" class="link" style="font-weight: bold;">Leia mais</a>
         </p>
         <!-- <div class="tags">
