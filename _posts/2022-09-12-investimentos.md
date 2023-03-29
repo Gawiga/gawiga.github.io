@@ -1,15 +1,32 @@
 ---
 layout: post
-title: "Minha visão sobre investimentos"
+title: "Sobre investimentos"
 date: 2022-09-12
 image: '/assets/img/'
 permalink: /blog/investimentos
-description: Investindo um pouco além de ETFs e Títulos públicos
+description: Indo um pouco além de ETFs e Títulos públicos
 ---
 
 > Atenção, esse artigo não é uma dica de investimento, apenas um relato da minha jornada até o momento.
 
 Após garantir um **reserva de emergência**, o próximo passo é diversificar os investimentos. Nessa era de excesso de informação com tantas opções de investimentos (e gente oferecendo produtos, ativos e cursos) discorro aqui sobre a minha caminhada até o momento.
+
+- [Imóveis](#imóveis)
+  * [Comprar ou Alugar?](#comprar-ou-alugar?)
+- [Automóveis](#automóveis)
+  * [Riscos](#riscos)
+- [Investimentos](#investimentos)
+  * [Reserva de Emergência](#reserva-de-emergência)
+  * [Conhecimento](#conhecimento)
+  * [Diversifique](#diversifique)
+  * [Não pulverize](#não-pulverize)
+  * [Limite a quantidade de ativos](#limite-a-quantidade-de-ativos)
+  * [Renda Fixa](#renda-fixa)
+  * [Ações ou ETFs](#ações-ou-etfs)
+- [Previdência Privada](#previdência-privada)
+- [Psicologia](#psicologia)
+- [Sono](#sono)
+- [Trabalho](#trabalho)
 
 ## Imóveis
 
@@ -71,6 +88,16 @@ Gosto da estratégia do Cerbasi, de colocar a porcentagem em renda fixa de acord
 ### Ações ou ETFs
 
 Existem várias opções na renda variável, FIIs, Ações, ETFs etc. Seguindo uma visão do JL Collins, Buffet e John Bogle, acho ETFs uma ótima estratégia de exposição a renda variável. Dos 60% em Renda Variável, 40% (2/3) estão em ETFs.  Os outros 20% gosto de apostar (sim, é aposta, se quiser investir mesmo fica no ETF) em boas empresas com boas gestão e um portfólio diversificado. Tenho também alguns FIIs, gosto da renda mensal e do *pseudoaluguel*, tem um efeito psicológico muito bom.
+
+## Previdência Privada
+
+*(trecho inserido em 2023-03-28)*
+
+Atualmente eu venho investindo mais em previdência privada, já que o principal objetivo dos meus investimentos, como já explanei, não é ficar rico, é adquirir uma certa independência financeira. 
+
+Vejo que o incentivo fiscal que existe hoje no PGBL é algo muito interessante, pouco explorado e falado, desde que claro, você arranje um fundo com um bom gestor, a baixas taxas. 
+
+No meu caso foi engraçado, comecei a pesquisar sobre isso e basicamente encontrei um fundo que “replicava” em ativos e em alocação a minha carteira naquele momento. Decidi começar lentamente essa migração, para colher os benefícios fiscais e conseguir ter uma tranquilidade maior devido a baixa liquidez neste tipo de investimento.
 
 ## Psicologia
 
