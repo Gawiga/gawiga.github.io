@@ -5,6 +5,7 @@ date: 2022-10-06
 image: '/assets/img/'
 permalink: /blog/politica-e-filosofia
 description: Porque os princípios filosóficos são a base da discordância política
+tag: nontech
 ---
 
 *“O homem é um animal político”* já dizia Aristóteles, viver é se posicionar de alguma forma. Entre tempos de polarização política, acho bom refletir quais caminhos alguém deve tomar para si, ir para esquerda? Para direita? Seguir firme ao centro?

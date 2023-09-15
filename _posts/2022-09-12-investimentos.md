@@ -5,6 +5,7 @@ date: 2022-09-12
 image: '/assets/img/'
 permalink: /blog/investimentos
 description: Indo um pouco além de ETFs e Títulos públicos
+tag: nontech
 ---
 
 > Atenção, esse artigo não é uma dica de investimento, apenas um relato da minha jornada até o momento.
