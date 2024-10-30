@@ -6,3 +6,4 @@ _drafts
 vendor
 bundle
 Gemfile.lock
+package-lock.json
