@@ -5,3 +5,4 @@ _drafts
 .jekyll-cache
 vendor
 bundle
+Gemfile.lock
