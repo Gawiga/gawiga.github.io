@@ -60,3 +60,7 @@ en:
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
+
+plugins:
+  - jekyll-seo-tag
+
