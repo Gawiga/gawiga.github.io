@@ -9,7 +9,4 @@ permalink: /sitemap.xml
 		<loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
 	  </url>
 	{% endfor %}
-	<url>
-		<!-- <loc>{{ site.url }}/curiojundiai</loc> -->
-	</url>
 </urlset>

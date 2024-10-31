@@ -63,4 +63,5 @@ exclude: ['package.json', 'src', 'node_modules']
 
 plugins:
   - jekyll-seo-tag
-
+  - jekyll-sitemap
+  - jekyll-feed
