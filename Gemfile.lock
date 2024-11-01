@@ -99,11 +99,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll
-  jekyll-admin
-  jekyll-feed
-  jekyll-seo-tag
-  jekyll-sitemap
+  jekyll (~> 4.3.4)
+  jekyll-admin (~> 0.11.1)
+  jekyll-feed (~> 0.17.0)
+  jekyll-seo-tag (~> 2.8.0)
+  jekyll-sitemap (~> 1.4.0)
   sinatra (~> 3.0)
   tzinfo-data
 
