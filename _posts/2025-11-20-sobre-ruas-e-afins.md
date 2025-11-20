@@ -3,7 +3,7 @@ layout: post
 title: "Sobre Ruas e Afins"
 date: 2025-11-20
 image: '/assets/img/'
-permalink: /blog/sobre-ruas-e-afins
+permalink: /blog/sobre-ruas-e-afins/
 description: Uma homenagem a aqueles que já se foram
 tag: nontech
 ---
@@ -30,7 +30,7 @@ Claudemir Galdino, filho de Dionísio e Maria, nasceu em Jundiaí, casou-se e te
 
 Enfim, divago… só me resta ficar feliz em saber, que no final da rua que tem nome do meu tio, possui um escadão que dá uma quadra onde crianças jogam bola.
 
-![image.png](../assets/img/sobre-ruas.png)
+![image.png](/assets/img/sobre-ruas.png)
 
 ## Notas:
 
