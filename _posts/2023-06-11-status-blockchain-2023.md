@@ -7,7 +7,7 @@ permalink: /blog/status-blockchain-2023
 description: Um prequel para Gridcoin
 tag: nontech
 ---
-## Status da Blockchain em 2023
+# Status da Blockchain em 2023
 
 No vale da desilusão do blockchain, coisas interessantes surgem. No [ciclo do gatner](https://en.wikipedia.org/wiki/Gartner_hype_cycle), blockchain perdeu o gás, a Inteligência Artificial vem entregando muito depois do paper “Attention Is All You Need” e  muito se viu que não se passava mais do que uma ferramenta que ajudava a resolver o problema de governança descentralizada, ponto que eu já tratei [aqui.](gawiga.com/blog/blockchain-ou-governanca-descentralizada)
 
