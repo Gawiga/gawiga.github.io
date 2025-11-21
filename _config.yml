@@ -6,7 +6,7 @@ url: "https://gawiga.com" # the base hostname & protocol for your site e.g. http
 enforce_ssl: gawiga.com
 
 # configurações do usuário
-username: Gawiga
+username: gawiga
 user_description: desenvolvedor
 user_title: developer
 email: contato@gawiga.com
