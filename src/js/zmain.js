@@ -19,7 +19,8 @@
     close: $(".icon-remove-sign"),
     searchform: $(".search-form"),
     canvas: $("body"),
-    dothis: $('.dosearch')
+    dothis: $('.dosearch'),
+    initialized: false
   };
 
   bs.dothis.on('click', function() {
@@ -27,7 +28,11 @@
     bs.searchform.toggleClass('active');
     bs.searchform.find('input').focus();
     bs.canvas.toggleClass('search-overlay');
-    $('.search-field').simpleJekyllSearch();
+
+    if (!bs.initialized) {
+      $('.search-field').simpleJekyllSearch();
+      bs.initialized = true;
+    }
   });
 
   bs.close.on('click', function() {

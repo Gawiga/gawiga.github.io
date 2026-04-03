@@ -16,6 +16,44 @@
             origThis = this,
             searchResults = $(settings.searchResults);
 
+        function createHeading() {
+            return $('<h4/>').text('Search Results:');
+        }
+
+        function createNoResults() {
+            return $('<p/>')
+                .text('Oh snap!')
+                .append($('<br/>'))
+                .append($('<small/>').text('Nothing found! :('));
+        }
+
+        function createSearchResult(entry) {
+            var item = $('<li/>');
+            var article = $('<article/>');
+            var link = $('<a/>').attr('href', entry.url || '#');
+            var dateText = entry.date || '';
+            var dateTime = entry.date || '';
+
+            link.text(entry.title || '');
+
+            if (dateText) {
+                var time = $('<time/>')
+                    .attr('datetime', dateTime)
+                    .text(dateText);
+
+                var span = $('<span/>')
+                    .addClass('entry-date')
+                    .append(time);
+
+                link.append(' ').append(span);
+            }
+
+            article.append(link);
+            item.append(article);
+
+            return item;
+        }
+
         if(settings.jsonFile.length && searchResults.length){
             $.ajax({
                 type: "GET",
@@ -62,21 +100,16 @@
 
         function writeMatches(m){
             clearSearchResults();
-            searchResults.append( $(settings.searchResultsTitle) );
+            searchResults.append(createHeading());
 
             if(m.length){
                 $.each(m,function(i,entry){
                     if(i<settings.limit){
-                        var output=settings.template;
-                        for(var i=0;i<properties.length;i++){
-                            var regex = new RegExp("\{" + properties[i] + "\}", 'g');
-                            output = output.replace(regex, entry[properties[i]]);
-                        }
-                        searchResults.append($(output));
+                        searchResults.append(createSearchResult(entry));
                     }
                 });
             }else{
-                searchResults.append( settings.noResults );
+                searchResults.append(createNoResults());
             }
 
 

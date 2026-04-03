@@ -16,7 +16,8 @@ test('Jekyll build generates critical public files', () => {
     'blog/index.html',
     'feed.xml',
     'sitemap.xml',
-    'search.json'
+    'search.json',
+    'assets/js/main.js'
   ].forEach((file) => {
     assert.ok(fs.existsSync(path.join(siteDir, file)), `expected ${file} to exist`);
   });
@@ -39,4 +40,16 @@ test('Search index exposes the expected post metadata', () => {
   ['title', 'category', 'url', 'date'].forEach((field) => {
     assert.ok(field in firstPost, `expected field ${field} in search index entry`);
   });
+});
+
+test('Post pages render the lazy comments trigger', () => {
+  const postHtml = readSiteFile('blog/drex.html');
+  assert.match(postHtml, /id="load-comments"/);
+});
+
+test('Security headers template exists for compatible static hosts', () => {
+  const headersFile = fs.readFileSync(path.join(rootDir, '_headers'), 'utf8');
+
+  assert.match(headersFile, /Content-Security-Policy/);
+  assert.match(headersFile, /Referrer-Policy/);
 });

@@ -4,9 +4,13 @@
   "description": "My jekyll blog template.",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "bundle exec jekyll serve --host 127.0.0.1 --port 4000",
+    "build": "bundle exec jekyll build && npm test",
     "build:site": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve",
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "test:e2e": "bundle exec jekyll build && npm test",
+    "audit": "npm audit --omit=dev"
   },
   "keywords": [
     "frontend",
