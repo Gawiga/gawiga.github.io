@@ -13,9 +13,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "semver"
-      - dependency-name: "lodash"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
