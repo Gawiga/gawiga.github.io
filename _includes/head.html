@@ -17,20 +17,20 @@
     <meta name="twitter:description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{page.image }}">
+    <meta property="twitter:image:src" content="{{ page.image | absolute_url }}">
     {% else %}
     <meta property="twitter:image:src"
-        content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+        content="{{ "/assets/img/blog-image.png" | absolute_url }}">
     {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
     <meta property="og:url"
-        content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        content="{{ page.url | replace:'index.html','' | absolute_url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
     {% else %}
-    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | absolute_url }}">
     {% endif %}
     <meta property="og:description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -40,10 +40,10 @@
     <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta itemprop="description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}" />
+    <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | absolute_url }}" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{site.baseurl}}/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ "/assets/img/icons/favicon.ico" | relative_url }}" type="image/x-icon" />
 
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="{{site.username}} Blog">
@@ -55,12 +55,12 @@
 
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="#0562DC">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-        href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+        href="{{ "/feed.xml" | absolute_url }}" />
 
     <!-- CSS at beginning to keep nice, instead to have a better performance -->
-    <link rel="stylesheet" href="{{ "../assets/css/main.css?v=" | append: site.version | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?v={{ site.version }}">
 
     {% if jekyll.environment == "production" and site.third_party_scripts and page.layout == "post" %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5339018332783189"

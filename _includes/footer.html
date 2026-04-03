@@ -7,7 +7,7 @@
     </p>
 </footer>
 
-<script src="{{ "/assets/js/main.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/main.js" | relative_url }}?v={{ site.version }}"></script>
 {% if jekyll.environment == "production" and site.third_party_scripts %}
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46453066-2"></script>
 <script>

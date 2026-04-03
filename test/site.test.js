@@ -26,8 +26,9 @@ test('Jekyll build generates critical public files', () => {
 test('Home page references the main stylesheet and script bundle', () => {
   const html = readSiteFile('index.html');
 
-  assert.match(html, /assets\/css\/main\.css/);
-  assert.match(html, /assets\/js\/main\.js/);
+  assert.match(html, /href="\/assets\/css\/main\.css\?v=/);
+  assert.match(html, /src="\/assets\/js\/main\.js\?v=/);
+  assert.doesNotMatch(html, /src="\/\/assets\/js\/main\.js/);
 });
 
 test('Search index exposes the expected post metadata', () => {
