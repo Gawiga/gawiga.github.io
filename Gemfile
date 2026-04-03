@@ -15,12 +15,9 @@ gem "jekyll", "~> 4.3.4"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
-gem "sinatra", "~> 3.0" # dependencia do jekyll-admin
-
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17.0"
-  gem "jekyll-admin", "~> 0.11.1"
   gem "jekyll-seo-tag", "~> 2.8.0"
   gem "jekyll-sitemap", "~> 1.4.0"
 end

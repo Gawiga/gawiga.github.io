@@ -4,7 +4,9 @@
   "description": "My jekyll blog template.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "test"
+    "build:site": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "test": "node --test test/*.test.js"
   },
   "keywords": [
     "frontend",
@@ -18,12 +20,10 @@
   "author": "Gabriel William Galdino",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer-stylus": "^0.4.0",
+    "autoprefixer-stylus": "^1.0.0",
     "browser-sync": "^3.0.3",
-    "grunt": "^1.3.0",
     "gulp": "^5.0.0",
     "gulp-concat": "^2.4.3",
-    "gulp-imagemin": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-stylus": "^3.0.1",
     "gulp-uglify": "^3.0.2"
