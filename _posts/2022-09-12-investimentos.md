@@ -4,6 +4,9 @@ title: "Sobre investimentos"
 date: 2022-09-12
 image: '/assets/img/'
 permalink: /blog/investimentos
+lang: pt
+translation_key: /blog/investimentos
+translation_url: /en/blog/investing
 description: Indo um pouco além de ETFs e Títulos públicos
 tag: nontech
 updated: 2024-10-29

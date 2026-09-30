@@ -10,10 +10,22 @@ function readSiteFile(relativePath) {
   return fs.readFileSync(path.join(siteDir, relativePath), 'utf8');
 }
 
+function listHtmlFiles(directory, files = []) {
+  fs.readdirSync(directory, { withFileTypes: true }).forEach((entry) => {
+    const entryPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      listHtmlFiles(entryPath, files);
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      files.push(path.relative(siteDir, entryPath).split(path.sep).join('/'));
+    }
+  });
+  return files;
+}
+
 test('Home page preserves its visual hierarchy and responsive entry points', () => {
   const html = readSiteFile('index.html');
 
-  assert.match(html, /<html lang="pt-br">/);
+  assert.match(html, /<html lang="pt-br"[^>]*>/);
   assert.match(html, /name="viewport" content="width=device-width, initial-scale=1"/);
   assert.match(html, /class="header-site"/);
   assert.match(html, /class="site-title\b[^>]*>[^<]+<\/span>/);
@@ -25,15 +37,69 @@ test('Home page preserves its visual hierarchy and responsive entry points', () 
   assert.match(html, /class="down"[^>]+href="#scroll"/);
 });
 
+test('Navigation menu links stay on the current host', () => {
+  const html = readSiteFile('index.html');
+
+  assert.match(html, /aria-label="inicio" href="\/"/);
+  assert.match(html, /aria-label="blog" href="\/blog\/"/);
+  assert.match(html, /aria-label="rss" href="\/feed\.xml"/);
+  assert.match(html, /aria-label="contato" href="\/#contato"/);
+  assert.doesNotMatch(html, /href="https:\/\/www\.gawiga\.com\/(?:blog\/|feed\.xml|#contato)?"/);
+});
+
+test('Portuguese and English blogs list all posts in their own language', () => {
+  const portugueseBlog = readSiteFile('blog/index.html');
+  const englishBlog = readSiteFile('en/blog/index.html');
+
+  assert.equal((portugueseBlog.match(/class="post-item"/g) || []).length, 15);
+  assert.equal((englishBlog.match(/class="post-item"/g) || []).length, 15);
+  assert.match(portugueseBlog, /Orquestrando Agentes/);
+  assert.doesNotMatch(portugueseBlog, /Orchestrating Agents/);
+  assert.match(englishBlog, /Orchestrating Agents/);
+  assert.doesNotMatch(englishBlog, /Orquestrando Agentes/);
+});
+
+test('Language switch links each agent article to its translation', () => {
+  const portuguesePost = readSiteFile('blog/orquestrando-agentes.html');
+  const englishPost = readSiteFile('en/blog/orchestrating-agents.html');
+  const englishHome = readSiteFile('en.html');
+
+  assert.match(portuguesePost, /aria-label="idioma" href="\/en\/blog\/orchestrating-agents"/);
+  assert.match(englishPost, /aria-label="language" href="\/blog\/orquestrando-agentes"/);
+  assert.match(englishPost, /<html lang="en"/);
+  assert.match(englishHome, /<title>gawiga - developer<\/title>/);
+  assert.match(englishHome, /Proudly hosted on/);
+  assert.match(englishHome, /src="\/assets\/img\/br\.png"/);
+  assert.doesNotMatch(englishHome, /src="\/en\/assets\/img\/br\.png"/);
+  assert.doesNotMatch(englishHome, /Orgulhosamente hospedado/);
+  assert.match(englishPost, /About the author/);
+  assert.match(englishPost, /Comments loaded/);
+});
+
 test('Compiled stylesheet preserves the current visual system and breakpoints', () => {
   const css = readSiteFile('assets/css/main.css');
 
-  assert.match(css, /\.header-site,\.header-post\{background:#004e37;height:100%/);
+  assert.match(css, /\.header-site,\.header-post\{background:var\(--main-background\);height:100%/);
+  assert.match(css, /--page-background:#171e1a/);
+  assert.match(css, /--page-background:#f5f7f5/);
   assert.match(css, /\.header-site \.site-title\{font-size:3\.75rem/);
   assert.match(css, /@media only screen and \(min-width:37\.5rem\)\{\.header-site \.site-title\{[^}]*font-size:6\.25rem/);
   assert.match(css, /\.icons-home a\{[^}]*border-radius:50%/);
   assert.match(css, /@media only screen and \(max-width:37\.5rem\)\{\.post-item \.datetime\{/);
   assert.match(css, /@media only screen and \(min-width:37\.5rem\)\{\.header-post \.content\{[^}]*max-width:1000px/);
+});
+
+test('Every generated HTML page starts dark and includes the theme toggle', () => {
+  const htmlFiles = listHtmlFiles(siteDir);
+
+  assert.ok(htmlFiles.length > 0, 'expected generated HTML pages');
+  htmlFiles.forEach((file) => {
+    const html = readSiteFile(file);
+    assert.match(html, /data-theme="dark"/, `${file} should default to dark mode`);
+    assert.match(html, /id="theme-toggle"/, `${file} should include the theme toggle`);
+    assert.match(html, /gawiga-theme/, `${file} should initialize the saved theme`);
+    assert.match(html, /assets\/js\/theme\.js\?v=/, `${file} should load the theme controller`);
+  });
 });
 
 test('Post pages preserve the visual hierarchy and responsive content layout', () => {
@@ -55,7 +121,8 @@ test('Jekyll build generates critical public files', () => {
     'sitemap.xml',
     'search.json',
     'assets/js/main.js',
-    'assets/js/search.js'
+    'assets/js/search.js',
+    'assets/js/theme.js'
   ].forEach((file) => {
     assert.ok(fs.existsSync(path.join(siteDir, file)), `expected ${file} to exist`);
   });
@@ -71,6 +138,13 @@ test('Home page references the main stylesheet and script bundle', () => {
   assert.match(html, /blog-image\.jpg/);
   assert.doesNotMatch(html, /src="\/\/assets\/js\/main\.js/);
   assert.match(html, /data-search-src="\/assets\/js\/search\.js\?v=/);
+});
+
+test('Blog post links remain local and do not become protocol-relative URLs', () => {
+  const blogHtml = readSiteFile('blog/index.html');
+
+  assert.match(blogHtml, /href="\/blog\/orquestrando-agentes"/);
+  assert.doesNotMatch(blogHtml, /href="\/\/blog\//);
 });
 
 test('Search implementation is excluded from the always-loaded bundle', () => {

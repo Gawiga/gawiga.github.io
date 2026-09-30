@@ -4,11 +4,11 @@
             <source srcset="{{ '/assets/img/blog-author.webp' | relative_url }}" type="image/webp">
             <img itemprop="image" class="img-rounded" src="{{ '/assets/img/blog-author.jpg' | relative_url }}" alt="{{site.name}}" width="350" height="351" loading="lazy" decoding="async">
         </picture>
-        <p class="def">Sobre o autor</p>
+        <p class="def">{% if page.lang == "en" %}About the author{% else %}Sobre o autor{% endif %}</p>
         <h3 class="name">
             <a itemprop="name" href="https://www.gawiga.com/">{{site.username}}</a>
         </h3>
-        <p class="desc">Tentando compilar um mundo melhor.</p>
+        <p class="desc">{% if page.lang == "en" %}Trying to compile a better world.{% else %}Tentando compilar um mundo melhor.{% endif %}</p>
         <!-- <a itemprop="email" class="email" href="mailto:{{site.email}}">{{site.email}}</a> -->
     </div>
 </section>

@@ -1,8 +1,8 @@
 <section class="comments">
-    <h3>Comentários</h3>
+    <h3>{% if page.lang == "en" %}Comments{% else %}Comentários{% endif %}</h3>
     <div id="disqus_thread"></div>
     <button type="button" id="load-comments" class="btn">
-        Carregar comentarios
+        {% if page.lang == "en" %}Load comments{% else %}Carregar comentarios{% endif %}
     </button>
 </section>
 <script>
@@ -16,7 +16,7 @@
 
         disqusLoaded = true;
         disqusButton.disabled = true;
-        disqusButton.textContent = 'Comentarios carregados';
+        disqusButton.textContent = '{% if page.lang == "en" %}Comments loaded{% else %}Comentarios carregados{% endif %}';
 
         window.disqus_config = function () {
             this.page.url = '{{ site.url }}{{ site.baseurl }}{{ page.url }}';
@@ -34,4 +34,4 @@
         disqusButton.addEventListener('click', loadDisqus);
     }
 </script>
-<noscript>Por favor, habilite o javascript <a href="https://disqus.com/?ref_noscript"> para comentar e habilitar o Disqus.</a></noscript>
+<noscript>{% if page.lang == "en" %}Please enable JavaScript{% else %}Por favor, habilite o javascript{% endif %} <a href="https://disqus.com/?ref_noscript">{% if page.lang == "en" %}to comment and enable Disqus.{% else %}para comentar e habilitar o Disqus.{% endif %}</a></noscript>

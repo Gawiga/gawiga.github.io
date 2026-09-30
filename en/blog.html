@@ -1,0 +1,17 @@
+---
+layout: default
+title: "Blog"
+description: "Sapere Aude"
+lang: en
+translation_url: /blog/
+permalink: /en/blog/index.html
+---
+{% include svg-icons.html %}
+<header class="header-site">
+    {% include header-post.html %}
+</header>
+<section class="content">
+    <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+        {% include posts.html %}
+    </main>
+</section>

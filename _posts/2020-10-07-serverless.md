@@ -4,6 +4,9 @@ title: "Serverless"
 date: 2020-10-07
 image: '/assets/img/'
 permalink: /blog/serverless
+lang: pt
+translation_key: /blog/serverless
+translation_url: /en/blog/serverless
 description: Serverless e o futuro da computação sem custos
 ---
 

@@ -4,7 +4,7 @@
   "description": "My jekyll blog template.",
   "scripts": {
     "assets:build": "gulp build",
-    "dev": "npm run assets:build && bundle exec jekyll serve --host 127.0.0.1 --port 4000",
+    "dev": "npm run assets:build && bundle exec jekyll serve --host localhost --port 4000",
     "build": "npm run build:site && npm test",
     "build:site": "npm run assets:build && bundle exec jekyll build",
     "serve": "npm run build:site && bundle exec jekyll serve",

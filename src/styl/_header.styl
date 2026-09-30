@@ -1,6 +1,8 @@
 html,
 body
 	height 100%
+	background var(--page-background)
+	color texts
 
 
 $bg
@@ -14,6 +16,11 @@ $bg
 // Header home
 .header-site
 	@extends $bg
+	.idiomas
+		margin-top rem(20px)
+		img
+			display block
+			margin 0 auto
 	h1,h2
 		color: sec
 		text-align center

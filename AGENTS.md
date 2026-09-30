@@ -23,6 +23,7 @@
 ## Cuidados nas alteracoes
 
 - Prefira mudancas pequenas que respeitem os layouts, includes e estilos existentes.
+- Antes de criar ou editar posts em `_posts/`, leia e siga `.agents/skills/translate-posts/SKILL.md`; toda postagem publicada deve ter versões pareadas em português e inglês.
 - Mantenha scripts de terceiros desativados por padrao; `_config.yml` controla isso com `third_party_scripts`.
 - Comentarios Disqus sao carregados apos interacao. Preserve esse comportamento quando alterar comentarios ou scripts externos.
 - Ao mexer em conteudo ou templates, confira o HTML gerado e rode os testes pertinentes.

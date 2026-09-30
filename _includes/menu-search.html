@@ -1,6 +1,6 @@
 <div class="search-wrapper">
   <div class="search-form">
-    <input type="text" class="search-field" name="pesquisar" placeholder="Search...">
+    <input type="text" class="search-field" name="pesquisar" placeholder="{% if page.lang == 'en' %}Search...{% else %}Pesquisar...{% endif %}">
     <svg class="icon-remove-sign">
       <use xlink:href="#icon-close"></use>
     </svg>
@@ -21,10 +21,19 @@
   <nav id="navigation">
     <h2>MENU</h2>
     <ul>
-      <li><a aria-label="inicio" href="https://www.gawiga.com/" title="Ínicio">Ínicio</a></li>
-      <li><a aria-label="blog" href="https://www.gawiga.com/blog/" title="Blog">Blog</a></li>
-      <li><a aria-label="rss" href="https://www.gawiga.com/feed.xml" title="Atom/RSS feed" class="feed">Feed</a></li>
-      <li><a aria-label="contato" href="https://www.gawiga.com/#contato" title="Contato">Contato</a></li>
+      {% if page.lang == "en" %}
+      <li><a aria-label="home" href="/en" title="Home">Home</a></li>
+      <li><a aria-label="blog" href="/en/blog/" title="Blog">Blog</a></li>
+      <li><a aria-label="rss" href="/feed.xml" title="Atom/RSS feed" class="feed">Feed</a></li>
+      <li><a aria-label="contact" href="/en#contato" title="Contact">Contact</a></li>
+      <li><a aria-label="language" href="{{ page.translation_url | default: '/' }}" title="Switch language">Português</a></li>
+      {% else %}
+      <li><a aria-label="inicio" href="/" title="Início">Início</a></li>
+      <li><a aria-label="blog" href="/blog/" title="Blog">Blog</a></li>
+      <li><a aria-label="rss" href="/feed.xml" title="Atom/RSS feed" class="feed">Feed</a></li>
+      <li><a aria-label="contato" href="/#contato" title="Contato">Contato</a></li>
+      <li><a aria-label="idioma" href="{{ page.translation_url | default: '/en' }}" title="Mudar idioma">English</a></li>
+      {% endif %}
     </ul>
   </nav>
 </aside>

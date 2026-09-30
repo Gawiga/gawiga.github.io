@@ -4,6 +4,9 @@ title: "Introdução ao Solidity"
 date: 2018-07-14
 image: '/assets/img/'
 permalink: /blog/solidity
+lang: pt
+translation_key: /blog/solidity
+translation_url: /en/blog/solidity-introduction
 description: Um pouco do que li sobre solidity
 ---
 

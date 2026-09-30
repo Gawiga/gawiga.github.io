@@ -1,0 +1,8 @@
+<script>
+    try {
+        var savedTheme = localStorage.getItem('gawiga-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    } catch (error) {}
+</script>

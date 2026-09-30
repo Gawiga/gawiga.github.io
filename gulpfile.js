@@ -45,4 +45,10 @@ function searchScripts() {
     .pipe(dest('assets/js'));
 }
 
-exports.build = series(styles, mainScripts, searchScripts);
+function themeScripts() {
+  return src('src/js/theme.js')
+    .pipe(terser())
+    .pipe(dest('assets/js'));
+}
+
+exports.build = series(styles, mainScripts, searchScripts, themeScripts);

@@ -4,6 +4,9 @@ title: "DDD, Hexagonal, Onion, Clean, CQRS, Como eu coloquei tudo isso junto"
 date: 2021-03-27
 image: '/assets/img/'
 permalink: /blog/arquitetura-explicita
+lang: pt
+translation_key: /blog/arquitetura-explicita
+translation_url: /en/blog/explicit-architecture
 description: Arquitetura Explícita
 ---
 
