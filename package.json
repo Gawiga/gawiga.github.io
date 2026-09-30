@@ -11,8 +11,8 @@
     "test": "node --test test/*.test.js",
     "test:e2e": "npm run build",
     "audit": "npm audit --omit=dev",
-    "lighthouse": "lhci autorun --config=lighthouserc.js",
-    "lighthouse:desktop": "LIGHTHOUSE_PRESET=desktop lhci autorun --config=lighthouserc.js"
+    "lighthouse": "node lighthouse-runner.mjs",
+    "lighthouse:desktop": "LIGHTHOUSE_PRESET=desktop npm run lighthouse"
   },
   "keywords": [
     "frontend",
@@ -25,14 +25,16 @@
   "author": "Gabriel William Galdino",
   "license": "ISC",
   "devDependencies": {
-    "@lhci/cli": "^0.15.1",
-    "autoprefixer-stylus": "^1.0.0",
+    "autoprefixer": "^10.6.1",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-stylus": "^3.0.1",
     "gulp-terser": "^2.1.0",
     "jeet": "^7.2.0",
-    "kouto-swiss": "^1.1.0",
-    "rupture": "^0.7.1"
+    "lighthouse": "^13.5.0",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.5.28",
+    "postcss-import": "^16.1.1",
+    "rupture": "^0.7.1",
+    "stylus": "^0.64.0"
   }
 }

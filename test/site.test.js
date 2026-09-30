@@ -10,6 +10,43 @@ function readSiteFile(relativePath) {
   return fs.readFileSync(path.join(siteDir, relativePath), 'utf8');
 }
 
+test('Home page preserves its visual hierarchy and responsive entry points', () => {
+  const html = readSiteFile('index.html');
+
+  assert.match(html, /<html lang="pt-br">/);
+  assert.match(html, /name="viewport" content="width=device-width, initial-scale=1"/);
+  assert.match(html, /class="header-site"/);
+  assert.match(html, /class="site-title\b[^>]*>[^<]+<\/span>/);
+  assert.match(html, /class="site-description\b[^>]*>[^<]+<\/span>/);
+  assert.match(html, /class="icons-home"/);
+  assert.match(html, /title="E-mail"/);
+  assert.match(html, /title="GitHub"/);
+  assert.match(html, /title="LinkedIn"/);
+  assert.match(html, /class="down"[^>]+href="#scroll"/);
+});
+
+test('Compiled stylesheet preserves the current visual system and breakpoints', () => {
+  const css = readSiteFile('assets/css/main.css');
+
+  assert.match(css, /\.header-site,\.header-post\{background:#004e37;height:100%/);
+  assert.match(css, /\.header-site \.site-title\{font-size:3\.75rem/);
+  assert.match(css, /@media only screen and \(min-width:37\.5rem\)\{\.header-site \.site-title\{[^}]*font-size:6\.25rem/);
+  assert.match(css, /\.icons-home a\{[^}]*border-radius:50%/);
+  assert.match(css, /@media only screen and \(max-width:37\.5rem\)\{\.post-item \.datetime\{/);
+  assert.match(css, /@media only screen and \(min-width:37\.5rem\)\{\.header-post \.content\{[^}]*max-width:1000px/);
+});
+
+test('Post pages preserve the visual hierarchy and responsive content layout', () => {
+  const html = readSiteFile('blog/drex.html');
+
+  assert.match(html, /<header class="header-post" role="banner">/);
+  assert.match(html, /class="post-title"[^>]*itemprop="name"/);
+  assert.match(html, /class="subtitle"/);
+  assert.match(html, /class="down"[^>]+href="#scroll"/);
+  assert.match(html, /class="post-content\b/);
+  assert.match(html, /<article[^>]+class="post-content/);
+});
+
 test('Jekyll build generates critical public files', () => {
   [
     'index.html',
