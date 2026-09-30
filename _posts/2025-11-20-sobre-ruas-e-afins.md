@@ -30,7 +30,10 @@ Claudemir Galdino, filho de Dionísio e Maria, nasceu em Jundiaí, casou-se e te
 
 Enfim, divago… só me resta ficar feliz em saber, que no final da rua que tem nome do meu tio, possui um escadão que dá uma quadra onde crianças jogam bola.
 
-![image.png](/assets/img/sobre-ruas.png)
+<picture>
+	<source type="image/webp" srcset="/assets/img/sobre-ruas-480.webp 480w, /assets/img/sobre-ruas-768.webp 768w, /assets/img/sobre-ruas-1052.webp 1052w" sizes="(max-width: 1052px) 100vw, 1052px">
+	<img src="/assets/img/sobre-ruas.png" alt="Escadão ao final da rua" width="1052" height="350" loading="lazy" decoding="async">
+</picture>
 
 ## Notas:
 

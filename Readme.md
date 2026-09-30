@@ -1,130 +1,79 @@
 # gawiga.github.io
 
-Site pessoal e blog estático em Jekyll, com templates Liquid, estilos em Stylus e um pequeno bundle JavaScript para busca, overlay de pesquisa e navegação lateral.
+Site pessoal e blog estático em Jekyll, com templates Liquid, estilos Stylus e JavaScript para busca e navegação. O site é gerado como arquivos estáticos e não depende de um backend de aplicação.
 
-## Visão geral
+## Stack e comandos
 
-O projeto prioriza simplicidade de deploy e baixo acoplamento:
+- Ruby `4.0.7` (em `.ruby-version`), Jekyll `4.4.1` (em `Gemfile`) e Node.js `22` na CI.
+- Os scripts npm compilam os assets, executam Jekyll e rodam os smoke tests.
+- Plugins Jekyll: `jekyll-feed`, `jekyll-seo-tag` e `jekyll-sitemap`.
 
-- geração estática com Jekyll;
-- conteúdo em `_posts/`;
-- layouts e includes em `_layouts/` e `_includes/`;
-- estilos fonte em `src/styl/` e bundle final em `assets/css/`;
-- scripts fonte em `src/js/` e bundle final em `assets/js/main.js`.
-
-O site roda localmente sem depender de backend de aplicação. Recursos de terceiros como analytics, anúncios e comentários ficam desativados por padrão no ambiente local.
-
-## Stack
-
-- Ruby `3.3.x`
-- Bundler `2.5.x`
-- Jekyll `4.3.4`
-- Node.js `20.x`
-- npm `11.x`
-- Stylus + Jeet + Rupture + Kouto Swiss
-
-## Estrutura principal
-
-- `_posts/`: posts do blog
-- `_includes/`: componentes reutilizáveis
-- `_layouts/`: layouts Jekyll
-- `src/js/`: fontes JavaScript
-- `src/styl/`: fontes Stylus
-- `assets/`: artefatos servidos pelo site
-- `test/`: smoke tests do build
-- `.github/workflows/`: CI e análise estática
-
-## Como rodar localmente
-
-Instale as dependências:
+Instale as dependências e rode localmente:
 
 ```bash
-bundle install --local
-npm install
+bundle install
+npm ci
+npm run dev
 ```
 
-Gere o site:
+O servidor local fica em `http://127.0.0.1:4000`. Para gerar o site e testar:
 
 ```bash
 npm run build
 ```
 
-Suba o servidor local:
+Comandos npm disponiveis: `dev`, `serve`, `build`, `build:site`, `test`, `test:e2e` e `audit`.
 
-```bash
-npm run dev
-```
+## Hospedagem e publicação
 
-Servidor esperado:
+Este site está hospedado no GitHub Pages, com domínio personalizado `gawiga.com`. A publicação é feita pelo GitHub Actions, que compila o site e envia o diretório `_site` como artefato do Pages; não é usado o build nativo do GitHub Pages.
+
+- Pull requests executam build, smoke tests e Lighthouse, sem publicar.
+- Pushes para `master` executam as mesmas verificações e publicam automaticamente quando todas passam.
+- O workflow também pode ser iniciado manualmente em **Actions > CI > Run workflow**. Para publicar, selecione a branch `master`.
+- Nas configurações do repositório, selecione **Settings > Pages > Build and deployment > GitHub Actions** como origem.
+
+Antes de enviar alterações, rode `npm run build`. Esse comando compila os assets e o site, depois executa os smoke tests. O workflow da CI também roda as auditorias Lighthouse antes do deploy.
+
+## Estrutura do site
 
 ```text
-http://127.0.0.1:4000
+.
+|-- _config.yml              configuração Jekyll, metadados e plugins
+|-- _posts/                  posts publicados, com front matter
+|-- _pages/                  diretório reservado para páginas adicionais
+|-- _layouts/                estruturas de página Jekyll
+|-- _includes/               componentes Liquid reutilizados nos layouts
+|-- assets/                  CSS, JavaScript, imagens, ícones e vídeo servidos
+|-- src/                     fontes JavaScript e Stylus
+|-- post/                    páginas estáticas legadas
+|-- old/                     conteúdo antigo e exemplos arquivados
+|-- blog.html                índice do blog
+|-- index.html               pagina inicial
+|-- series.html, tags.html   paginas de series e tags
+|-- search.json              indice usado pela busca
+|-- feed.xml, sitemap.xml    feed RSS e mapa do site
+|-- test/                    smoke tests do site gerado
+|-- .github/workflows/       CI e analise CodeQL
+|-- _site/                   saida gerada pelo Jekyll
+`-- gulpfile.js              pipeline Gulp legado
 ```
 
-## Comandos úteis
+O `_config.yml` define o permalink dos posts, a navegação, os plugins e `third_party_scripts: false`. A home e as páginas de post usam layouts/includes dedicados; comentários Disqus só carregam depois da interação do visitante.
 
-```bash
-npm run build
-npm run build:site
-npm run dev
-npm run test
-npm run test:e2e
-npm run audit
-```
+## Build e manutencao
 
-## Testes
+- `npm run build` executa `bundle exec jekyll build` e depois `npm test`.
+- `npm run build:site` gera apenas o site; `npm test` verifica a saída existente em `_site/`.
+- A CI e o deploy do GitHub Pages estão em `.github/workflows/ci.yml`; CodeQL analisa JavaScript e Ruby.
+- `src/js/` e `src/styl/` contêm fontes; `assets/` contém arquivos servidos pelo site. O `gulpfile.js` descreve um fluxo legado e não é chamado pelos scripts npm atuais. Confira como gerar os bundles antes de alterar as fontes e mantenha fontes e arquivos servidos sincronizados.
+- Não edite `_site/` manualmente: ele é recriado pelo Jekyll.
+- `bundle exec jekyll serve` tambem inicia o servidor Jekyll diretamente.
 
-Hoje o projeto tem smoke tests focados em geração estática:
+## Segurança e recursos externos
 
-- existência dos arquivos principais em `_site/`;
-- referência correta ao bundle CSS/JS;
-- integridade básica de `search.json`;
-- presença do gatilho lazy de comentários;
-- presença do arquivo `_headers` para hosts compatíveis.
-
-Executar:
-
-```bash
-npm test
-```
-
-## Observações de manutenção
-
-- O bundle JavaScript final `assets/js/main.js` ainda é derivado dos arquivos em `src/js/`.
-- O pipeline legado de Gulp continua no repositório, mas o fluxo principal do projeto já pode operar com Jekyll + npm scripts.
-- O `jekyll-admin` foi removido para simplificar o ambiente local e reduzir atrito com dependências Ruby.
-- O bump do `jekyll` para `4.4.1` segue desejável, mas ainda depende de correção do ambiente Ruby/OpenSSL local para atualização remota das gems.
-
-## Segurança e headers
-
-O repositório inclui um arquivo `_headers` com uma baseline de segurança para hosts estáticos compatíveis, incluindo:
-
-- `Content-Security-Policy`
-- `Referrer-Policy`
-- `X-Content-Type-Options`
-- `X-Frame-Options`
-- `Permissions-Policy`
-
-Em GitHub Pages puro, esses headers ainda dependem de um edge/proxy compatível.
-
-## Comentários e scripts de terceiros
-
-Por padrão, `_config.yml` mantém:
-
-```yml
-third_party_scripts: false
-```
-
-Isso evita carregar analytics, AdSense e scripts externos durante desenvolvimento local. Comentários Disqus são carregados sob demanda por interação do usuário.
-
-## Dependabot e CI
-
-O projeto está preparado para:
-
-- updates semanais de `bundler`, `npm` e `github-actions`;
-- workflow de CI com build Jekyll e smoke tests;
-- workflow de CodeQL atualizado para as actions mais recentes.
+O arquivo `_headers` define headers de segurança para hosts estáticos compatíveis. No GitHub Pages, a aplicação desses headers depende de um proxy ou edge que os suporte. Analytics e anúncios só são incluídos em produção quando `third_party_scripts` está habilitado.
 
 ## Licença
 
-Distribuído sob a licença MIT, preservando os créditos do template base original quando aplicável.
+Distribuído sob a licença MIT; os créditos do template base original devem ser preservados.

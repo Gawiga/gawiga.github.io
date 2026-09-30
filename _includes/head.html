@@ -16,21 +16,21 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    {% if page.image %}
+    {% if page.image and page.image != '/assets/img/' %}
     <meta property="twitter:image:src" content="{{ page.image | absolute_url }}">
     {% else %}
     <meta property="twitter:image:src"
-        content="{{ "/assets/img/blog-image.png" | absolute_url }}">
+        content="{{ "/assets/img/blog-image.jpg" | absolute_url }}">
     {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
     <meta property="og:url"
         content="{{ page.url | replace:'index.html','' | absolute_url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.image %}
+    {% if page.image and page.image != '/assets/img/' %}
     <meta property="og:image" content="{{ page.image | absolute_url }}">
     {% else %}
-    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | absolute_url }}">
+    <meta property="og:image" content="{{ "/assets/img/blog-image.jpg" | absolute_url }}">
     {% endif %}
     <meta property="og:description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -40,10 +40,11 @@
     <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta itemprop="description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | absolute_url }}" />
+    <meta itemprop="image" content="{{ "/assets/img/blog-image.jpg" | absolute_url }}" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ "/assets/img/icons/favicon.ico" | relative_url }}" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="{{ "/assets/img/icons/favicon.ico" | relative_url }}" type="image/x-icon" sizes="any">
 
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="{{site.username}} Blog">

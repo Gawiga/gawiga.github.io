@@ -1,4 +1,7 @@
 (function( $, window, undefined ) {
+  var currentScript = document.currentScript;
+  var searchScriptUrl = currentScript && currentScript.getAttribute('data-search-src');
+
   // Menu
   $("a#slide").click(function(){
     $("#sidebar,a#slide,#fade").addClass("slide");
@@ -20,7 +23,8 @@
     searchform: $(".search-form"),
     canvas: $("body"),
     dothis: $('.dosearch'),
-    initialized: false
+    initialized: false,
+    loading: false
   };
 
   bs.dothis.on('click', function() {
@@ -29,11 +33,27 @@
     bs.searchform.find('input').focus();
     bs.canvas.toggleClass('search-overlay');
 
-    if (!bs.initialized) {
-      $('.search-field').simpleJekyllSearch();
-      bs.initialized = true;
-    }
+    loadSearch();
   });
+
+  function loadSearch() {
+    if (bs.initialized || bs.loading) {
+      return;
+    }
+
+    bs.loading = true;
+    var script = document.createElement('script');
+    script.src = searchScriptUrl || '/assets/js/search.js';
+    script.onload = function() {
+      bs.initialized = true;
+      bs.loading = false;
+      $('.search-field').simpleJekyllSearch();
+    };
+    script.onerror = function() {
+      bs.loading = false;
+    };
+    document.head.appendChild(script);
+  }
 
   bs.close.on('click', function() {
     $('.search-wrapper').toggleClass('active');

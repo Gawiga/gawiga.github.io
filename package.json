@@ -2,25 +2,39 @@
   "name": "gawigatemplate",
   "version": "1.0.0",
   "description": "My jekyll blog template.",
-  "main": "gulpfile.js",
   "scripts": {
-    "dev": "bundle exec jekyll serve --host 127.0.0.1 --port 4000",
-    "build": "bundle exec jekyll build && npm test",
-    "build:site": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve",
+    "assets:build": "gulp build",
+    "dev": "npm run assets:build && bundle exec jekyll serve --host 127.0.0.1 --port 4000",
+    "build": "npm run build:site && npm test",
+    "build:site": "npm run assets:build && bundle exec jekyll build",
+    "serve": "npm run build:site && bundle exec jekyll serve",
     "test": "node --test test/*.test.js",
-    "test:e2e": "bundle exec jekyll build && npm test",
-    "audit": "npm audit --omit=dev"
+    "test:e2e": "npm run build",
+    "audit": "npm audit --omit=dev",
+    "lighthouse": "node lighthouse-runner.mjs",
+    "lighthouse:desktop": "LIGHTHOUSE_PRESET=desktop npm run lighthouse"
   },
   "keywords": [
     "frontend",
     "blog",
     "css",
     "stylus",
-    "gulp",
     "jekyll",
     "js"
   ],
   "author": "Gabriel William Galdino",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "gulp": "^5.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^2.1.0",
+    "jeet": "^7.2.0",
+    "lighthouse": "^13.5.0",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.5.28",
+    "postcss-import": "^16.1.1",
+    "rupture": "^0.7.1",
+    "stylus": "^0.64.0"
+  }
 }
