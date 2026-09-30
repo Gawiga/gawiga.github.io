@@ -4,7 +4,7 @@ Site pessoal e blog estático em Jekyll, com templates Liquid, estilos Stylus e 
 
 ## Stack e comandos
 
-- Ruby `3.3.5` (em `.ruby-version`), Jekyll `4.4.1` (em `Gemfile`) e Node.js `22` na CI.
+- Ruby `4.0.7` (em `.ruby-version`), Jekyll `4.4.1` (em `Gemfile`) e Node.js `22` na CI.
 - Os scripts npm compilam os assets, executam Jekyll e rodam os smoke tests.
 - Plugins Jekyll: `jekyll-feed`, `jekyll-seo-tag` e `jekyll-sitemap`.
 
