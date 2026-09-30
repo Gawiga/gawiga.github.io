@@ -8,7 +8,7 @@ description: Como criar seu webapp de graça hoje
 ---
 Já que está todo mundo falando de IA, venho aqui contar um causo pessoal e falar um pouco do presente.
 
-| Minha esposa não gosta de planilhas. 
+> Minha esposa não gosta de planilhas.
 
 Eu gosto. Acho que elas dão bastante poder para o usuário e têm aquela interface WYSIWYG.[1](https://www.youtube.com/watch?v=H-zQky0HGhg) 
 

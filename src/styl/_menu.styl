@@ -21,20 +21,52 @@ a.slideButton, .dosearch
     left 10px
 .dosearch
     right 10px
-    background darken(main,10%)
+    background controlBackground
     border-radius rem(3px)
     padding rem(2px) rem(3px)
 .icon-menu
     cursor pointer
     padding rem(5px)
     border-radius rem(3px)
-    background darken(main,10%)
+    background controlBackground
     width rem(40px)
     height rem(40px)
     fill sec
 .icon-search
     width rem(35px)
     height rem(35px)
+
+.theme-toggle
+    position fixed
+    top 10px
+    right 60px
+    z-index 32
+    display grid
+    place-items center
+    width 40px
+    height 40px
+    padding 0
+    border 1px solid borderColor
+    border-radius 50%
+    background controlBackground
+    color sec
+    cursor pointer
+    transition all .25s ease
+    &:hover
+        background sec
+        color main
+    &:focus-visible
+        outline 2px solid accent
+        outline-offset 2px
+
+.theme-toggle__icon
+    font-size rem(24px)
+    line-height 1
+    &::before
+        content '☼'
+
+html[data-theme='light'] .theme-toggle__icon::before
+    content '☾'
 
 .overlay
     cursor pointer
@@ -49,7 +81,7 @@ aside
     padding rem(40px) 0 0
     top 0
     left rem(-240px)
-    background #3F3F3F
+    background lightGray
     z-index 20
     box-shadow inset -10px -1px 15px -9px rgba(0,0,0,0.5)
     h2
@@ -70,13 +102,13 @@ aside
                 padding rem(20px)
                 text-decoration none
                 mainFont(300)
-                color #b3b3b1
-                border-top 1px solid darken(lightGray,50%)
+                color texts
+                border-top 1px solid borderColor
                 &:hover
-                    color #191918
+                    color main
                     background sec
         .feed
-            border-bottom 1px solid darken(lightGray,50%)
+            border-bottom 1px solid borderColor
     &.slide
         left 0
 

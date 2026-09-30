@@ -16,13 +16,46 @@ npm ci
 npm run dev
 ```
 
-O servidor local fica em `http://127.0.0.1:4000`. Para gerar o site e testar:
+O servidor local fica em `http://localhost:4000`. Para gerar o site e testar:
 
 ```bash
 npm run build
 ```
 
 Comandos npm disponiveis: `dev`, `serve`, `build`, `build:site`, `test`, `test:e2e` e `audit`.
+
+## FEATURES
+
+- Tema escuro como padrão e botão no canto superior direito para alternar entre os temas escuro e claro. A escolha fica salva neste navegador.
+- Os dois temas estão disponíveis em todas as páginas geradas:
+- `/` (início)
+- `/blog/` (índice do blog)
+- `/blog/agregadores-ou-plataformas.html`
+- `/blog/arquitetura-explicita.html`
+- `/blog/blockchain-ou-governanca-descentralizada.html`
+- `/blog/clt_ou_pj.html`
+- `/blog/coinhive/`
+- `/blog/computacao-distribuida-blockchain-e-o-poder-na-mao-do-usuario.html`
+- `/blog/criando-uma-conexao-com-oracle-client-usando-csharp.html`
+- `/blog/drex.html`
+- `/blog/howto.html`
+- `/blog/inteligencia-artificial.html`
+- `/blog/investimentos.html`
+- `/blog/javascript.html`
+- `/blog/orquestrando-agentes.html`
+- `/blog/politica-e-filosofia.html`
+- `/blog/serverless.html`
+- `/blog/sobre-html-e-css.html`
+- `/blog/sobre-ruas-e-afins/`
+- `/blog/solidity.html`
+- `/blog/status-blockchain-2023.html`
+- `/blog/teoria-da-categoria.html`
+- `/blog/welcome.html`
+- `/series/` (séries)
+- `/tags/` (tags)
+- `/en.html` (página em inglês)
+- `/old.html` (arquivo legado)
+- `/404.html` e `/404old.html` (páginas de erro)
 
 ## Hospedagem e publicação
 

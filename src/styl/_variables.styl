@@ -1,9 +1,40 @@
 // COLORS
-main = #004E37
-hover = darken(main, 50%)
-sec  = #FFFFFF
-lightGray = #F2F2F2
-texts = #333333
+:root
+	color-scheme dark
+	--page-background #171e1a
+	--main-background #101a16
+	--accent-color #83d9a8
+	--hover-color #b0efca
+	--primary-text #f2f6f3
+	--surface-color #26342d
+	--body-text #d6e0d9
+	--control-background #0e1714
+	--border-color #3b4941
+	--blockquote-text rgba(242,246,243,0.72)
+	--table-border #536159
+
+html[data-theme='light']
+	color-scheme light
+	--page-background #f5f7f5
+	--main-background #eaf0ec
+	--accent-color #006b43
+	--hover-color #004e37
+	--primary-text #1d2922
+	--surface-color #e3ebe5
+	--body-text #29362f
+	--control-background #dce8e0
+	--border-color #c1d0c6
+	--blockquote-text rgba(29,41,34,0.72)
+	--table-border #9aaba0
+
+main = var(--main-background)
+accent = var(--accent-color)
+hover = var(--hover-color)
+sec  = var(--primary-text)
+lightGray = var(--surface-color)
+texts = var(--body-text)
+controlBackground = var(--control-background)
+borderColor = var(--border-color)
 colorcode = #3085F4
 // Resolution
 cut = 37.5rem

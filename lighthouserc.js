@@ -1,10 +1,10 @@
 module.exports = {
-  serverCommand: 'bundle exec jekyll serve --host 127.0.0.1 --port 4000',
+  serverCommand: 'bundle exec jekyll serve --host localhost --port 4000',
   serverReadyPattern: 'Server address:',
   urls: [
-    'http://127.0.0.1:4000/',
-    'http://127.0.0.1:4000/blog/',
-    'http://127.0.0.1:4000/blog/drex'
+    'http://localhost:4000/',
+    'http://localhost:4000/blog/',
+    'http://localhost:4000/blog/drex'
   ],
   numberOfRuns: 1,
   chromeFlags: ['--headless=new', '--no-sandbox'],
