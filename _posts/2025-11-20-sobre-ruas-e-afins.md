@@ -4,6 +4,9 @@ title: "Sobre Ruas e Afins"
 date: 2025-11-20
 image: '/assets/img/'
 permalink: /blog/sobre-ruas-e-afins/
+lang: pt
+translation_key: /blog/sobre-ruas-e-afins/
+translation_url: /en/blog/on-streets-and-such
 description: Uma homenagem a aqueles que já se foram
 tag: nontech
 ---

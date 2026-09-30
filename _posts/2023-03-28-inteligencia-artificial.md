@@ -4,6 +4,9 @@ title: "Inteligência Artificial"
 date: 2023-03-28
 image: '/assets/img/'
 permalink: /blog/inteligencia-artificial
+lang: pt
+translation_key: /blog/inteligencia-artificial
+translation_url: /en/blog/artificial-intelligence
 description: Assistente ou Dirigente?
 ---
 Esse mês de março/2023, foi abalado de uma forma sísmica sem precedentes na área de TI. Pelo menos, desde que me lembro. Em 2017 eu estava bem empolgado com o Blockchain, algumas postagens neste blog ratificam isso. Porém, o abalo do blockchain foi visto com muito mais ceticismo devido a “falta das entregas” desta tecnologia. Até eu [reclamei aqui](https://www.gawiga.com/blog/blockchain-ou-governanca-descentralizada).

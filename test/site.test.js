@@ -47,6 +47,35 @@ test('Navigation menu links stay on the current host', () => {
   assert.doesNotMatch(html, /href="https:\/\/www\.gawiga\.com\/(?:blog\/|feed\.xml|#contato)?"/);
 });
 
+test('Portuguese and English blogs list all posts in their own language', () => {
+  const portugueseBlog = readSiteFile('blog/index.html');
+  const englishBlog = readSiteFile('en/blog/index.html');
+
+  assert.equal((portugueseBlog.match(/class="post-item"/g) || []).length, 15);
+  assert.equal((englishBlog.match(/class="post-item"/g) || []).length, 15);
+  assert.match(portugueseBlog, /Orquestrando Agentes/);
+  assert.doesNotMatch(portugueseBlog, /Orchestrating Agents/);
+  assert.match(englishBlog, /Orchestrating Agents/);
+  assert.doesNotMatch(englishBlog, /Orquestrando Agentes/);
+});
+
+test('Language switch links each agent article to its translation', () => {
+  const portuguesePost = readSiteFile('blog/orquestrando-agentes.html');
+  const englishPost = readSiteFile('en/blog/orchestrating-agents.html');
+  const englishHome = readSiteFile('en.html');
+
+  assert.match(portuguesePost, /aria-label="idioma" href="\/en\/blog\/orchestrating-agents"/);
+  assert.match(englishPost, /aria-label="language" href="\/blog\/orquestrando-agentes"/);
+  assert.match(englishPost, /<html lang="en"/);
+  assert.match(englishHome, /<title>gawiga - developer<\/title>/);
+  assert.match(englishHome, /Proudly hosted on/);
+  assert.match(englishHome, /src="\/assets\/img\/br\.png"/);
+  assert.doesNotMatch(englishHome, /src="\/en\/assets\/img\/br\.png"/);
+  assert.doesNotMatch(englishHome, /Orgulhosamente hospedado/);
+  assert.match(englishPost, /About the author/);
+  assert.match(englishPost, /Comments loaded/);
+});
+
 test('Compiled stylesheet preserves the current visual system and breakpoints', () => {
   const css = readSiteFile('assets/css/main.css');
 

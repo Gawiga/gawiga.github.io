@@ -4,6 +4,9 @@ title: "Agregadores ou Plataformas"
 date: 2022-05-06
 image: '/assets/img/'
 permalink: /blog/agregadores-ou-plataformas
+lang: pt
+translation_key: /blog/agregadores-ou-plataformas
+translation_url: /en/blog/aggregators-or-platforms
 description: Como as big techs dominam o mercado e criam monopólios em uma rede descentralizada
 ---
 

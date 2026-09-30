@@ -4,6 +4,9 @@ title: "Orquestrando Agentes"
 date: 2026-03-01
 image: '/assets/img/'
 permalink: /blog/orquestrando-agentes
+lang: pt
+translation_key: /blog/orquestrando-agentes
+translation_url: /en/blog/orchestrating-agents
 description: Como criar seu webapp de graça hoje
 ---
 Já que está todo mundo falando de IA, venho aqui contar um causo pessoal e falar um pouco do presente.

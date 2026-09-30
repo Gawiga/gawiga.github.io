@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="{% if page.lang == 'en' %}en{% else %}pt-br{% endif %}" data-theme="dark">
     {% include head.html %}
     <body>
         {% include svg-icons.html %}

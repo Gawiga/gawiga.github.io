@@ -4,6 +4,9 @@ title: "Política e Filosofia"
 date: 2022-10-06
 image: '/assets/img/'
 permalink: /blog/politica-e-filosofia
+lang: pt
+translation_key: /blog/politica-e-filosofia
+translation_url: /en/blog/politics-and-philosophy
 description: Porque os princípios filosóficos são a base da discordância política
 tag: nontech
 ---

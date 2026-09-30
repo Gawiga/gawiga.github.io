@@ -1,12 +1,19 @@
 <footer>
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema de cores" aria-pressed="false" title="Ativar tema claro">
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="{% if page.lang == 'en' %}Toggle color theme{% else %}Alternar tema de cores{% endif %}" aria-pressed="false" title="{% if page.lang == 'en' %}Switch to light theme{% else %}Ativar tema claro{% endif %}">
     <span class="theme-toggle__icon" aria-hidden="true"></span>
   </button>
     <p class="ubuntu ">
+        {% if page.lang == "en" %}
+        Proudly hosted on <a href="https://pages.github.com/">GitHub Pages</a>.
+        Built with <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer" class="blue">Jekyll</a>
+        and lots of 🧡 by <a href="https://github.com/gawiga">Gawiga</a>,
+        using a modified layout by <a href="https://github.com/willianjusten/will-jekyll-template">Willian Justen</a>.
+        {% else %}
         Orgulhosamente hospedado no <a href="https://pages.github.com/">GitHub Pages</a>.
         Feito com <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer" class="blue">Jekyll</a> 
         e com muito 🧡 por <a href="https://github.com/gawiga">Gawiga</a>
         utilizando o layout modificado do <a href="https://github.com/willianjusten/will-jekyll-template">Willian Justen</a>
+        {% endif %}
     </p>
 </footer>
 

@@ -4,6 +4,9 @@ title: "Computação distribuída, blockchain e o poder na mão do usuário"
 date: 2018-03-01
 image: '/assets/img/'
 permalink: /blog/computacao-distribuida-blockchain-e-o-poder-na-mao-do-usuario
+lang: pt
+translation_key: /blog/computacao-distribuida-blockchain-e-o-poder-na-mao-do-usuario
+translation_url: /en/blog/distributed-computing-blockchain-user-power
 description: Porque computação distribuída pode mudar o futuro
 ---
 

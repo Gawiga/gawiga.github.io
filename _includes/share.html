@@ -2,14 +2,14 @@
 <section class="share">
 
     {% if page.date %}
-        <p>Artigo publicado em 
+        <p>{% if page.lang == "en" %}Article published on{% else %}Artigo publicado em{% endif %}
             <time itemprop="datePublished" datetime="{{ page.date }}" class="date">
                 {{ page.date | date: "%d-%m-%Y" }}
             </time>
         </p>
     {% endif %}
 
-    <h3>Divulgue a palavra</h3>
+    <h3>{% if page.lang == "en" %}Share this article{% else %}Divulgue a palavra{% endif %}</h3>
 
     <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text={{ page.twitter_text }}{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">

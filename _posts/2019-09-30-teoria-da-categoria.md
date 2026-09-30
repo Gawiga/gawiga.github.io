@@ -4,6 +4,9 @@ title: "Teoria da Categoria para Programadores"
 date: 2019-09-30
 image: '/assets/img/'
 permalink: /blog/teoria-da-categoria
+lang: pt
+translation_key: /blog/teoria-da-categoria
+translation_url: /en/blog/category-theory-for-programmers
 description: Uma visão matemática para programadores
 ---
 

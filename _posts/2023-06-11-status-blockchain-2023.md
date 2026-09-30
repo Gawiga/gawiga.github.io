@@ -4,6 +4,9 @@ title: "Status Blockchain 2023"
 date: 2023-06-11
 image: '/assets/img/'
 permalink: /blog/status-blockchain-2023
+lang: pt
+translation_key: /blog/status-blockchain-2023
+translation_url: /en/blog/blockchain-status-2023
 description: Um prequel para Gridcoin
 tag: nontech
 ---
