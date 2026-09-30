@@ -77,8 +77,8 @@ test('Search implementation is excluded from the always-loaded bundle', () => {
   const mainBundle = readSiteFile('assets/js/main.js');
   const searchBundle = readSiteFile('assets/js/search.js');
 
-  assert.doesNotMatch(mainBundle, /simpleJekyllSearch/);
-  assert.match(searchBundle, /simpleJekyllSearch/);
+  assert.doesNotMatch(mainBundle, /\.fn\.simpleJekyllSearch\s*=/);
+  assert.match(searchBundle, /\.fn\.simpleJekyllSearch\s*=/);
 });
 
 test('Post pages use responsive WebP sources with dimensioned fallbacks', () => {

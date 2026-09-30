@@ -17,6 +17,8 @@
 - Para gerar o site e rodar os smoke tests, use `npm run build`.
 - Para executar apenas os testes, gere `_site/` primeiro e rode `npm test`.
 - Os testes em `test/site.test.js` verificam arquivos gerados, referencias aos bundles, indice de busca, comentarios sob demanda e headers.
+- O site e publicado no GitHub Pages via `.github/workflows/ci.yml`: pull requests validam sem publicar; pushes para `master` publicam `_site` apos build, smoke tests e Lighthouse.
+- A publicacao manual deve ser iniciada em Actions na branch `master`. A origem do Pages no repositorio precisa estar configurada como GitHub Actions.
 
 ## Cuidados nas alteracoes
 

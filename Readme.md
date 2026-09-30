@@ -4,8 +4,8 @@ Site pessoal e blog estático em Jekyll, com templates Liquid, estilos Stylus e 
 
 ## Stack e comandos
 
-- Ruby `3.3.5` (em `.ruby-version`) e Jekyll `4.3.4` (em `Gemfile`).
-- Node.js `20` na CI; os scripts npm executam Jekyll e os smoke tests.
+- Ruby `3.3.5` (em `.ruby-version`), Jekyll `4.4.1` (em `Gemfile`) e Node.js `22` na CI.
+- Os scripts npm compilam os assets, executam Jekyll e rodam os smoke tests.
 - Plugins Jekyll: `jekyll-feed`, `jekyll-seo-tag` e `jekyll-sitemap`.
 
 Instale as dependências e rode localmente:
@@ -23,6 +23,17 @@ npm run build
 ```
 
 Comandos npm disponiveis: `dev`, `serve`, `build`, `build:site`, `test`, `test:e2e` e `audit`.
+
+## Hospedagem e publicação
+
+Este site está hospedado no GitHub Pages, com domínio personalizado `gawiga.com`. A publicação é feita pelo GitHub Actions, que compila o site e envia o diretório `_site` como artefato do Pages; não é usado o build nativo do GitHub Pages.
+
+- Pull requests executam build, smoke tests e Lighthouse, sem publicar.
+- Pushes para `master` executam as mesmas verificações e publicam automaticamente quando todas passam.
+- O workflow também pode ser iniciado manualmente em **Actions > CI > Run workflow**. Para publicar, selecione a branch `master`.
+- Nas configurações do repositório, selecione **Settings > Pages > Build and deployment > GitHub Actions** como origem.
+
+Antes de enviar alterações, rode `npm run build`. Esse comando compila os assets e o site, depois executa os smoke tests. O workflow da CI também roda as auditorias Lighthouse antes do deploy.
 
 ## Estrutura do site
 
@@ -54,7 +65,7 @@ O `_config.yml` define o permalink dos posts, a navegação, os plugins e `third
 
 - `npm run build` executa `bundle exec jekyll build` e depois `npm test`.
 - `npm run build:site` gera apenas o site; `npm test` verifica a saída existente em `_site/`.
-- A CI em `.github/workflows/ci.yml` instala as dependências, gera o site e roda os smoke tests. CodeQL analisa JavaScript e Ruby.
+- A CI e o deploy do GitHub Pages estão em `.github/workflows/ci.yml`; CodeQL analisa JavaScript e Ruby.
 - `src/js/` e `src/styl/` contêm fontes; `assets/` contém arquivos servidos pelo site. O `gulpfile.js` descreve um fluxo legado e não é chamado pelos scripts npm atuais. Confira como gerar os bundles antes de alterar as fontes e mantenha fontes e arquivos servidos sincronizados.
 - Não edite `_site/` manualmente: ele é recriado pelo Jekyll.
 - `bundle exec jekyll serve` tambem inicia o servidor Jekyll diretamente.
