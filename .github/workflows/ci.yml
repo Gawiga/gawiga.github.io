@@ -29,8 +29,23 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Build site
-        run: bundle exec jekyll build
+      - name: Build site and run smoke tests
+        run: npm run build
 
-      - name: Run frontend smoke tests
-        run: npm test
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Run Lighthouse on mobile
+        run: npm run lighthouse
+
+      - name: Run Lighthouse on desktop
+        run: npm run lighthouse:desktop
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lighthouse-reports/
+          if-no-files-found: ignore
+
