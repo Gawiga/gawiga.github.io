@@ -25,7 +25,7 @@
   "author": "Gabriel William Galdino",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.6.1",
+    "autoprefixer": "^10.6.2",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-terser": "^2.1.0",
